@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direct Property Partners — Brand Guidelines v2.0</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:        #040c1b;
+  --navy-deep:  #0B1C38;
+  --navy:       #163366;
+  --navy-light: #1F4899;
+  --blue:       #0B7EFF;
+  --blue-hover: #0066D6;
+  --blue-soft:  #4DA6FF;
+  --white:      #FFFFFF;
+  --off-white:  #f2f6fc;
+  --gray-100:   #E1E8F2;
+  --gray-200:   #c8d5e8;
+  --gray-400:   #8A9BB5;
+  --gray-600:   #5b6e8a;
+  --gray-700:   #3a5070;
+  --success:    #16a34a;
+  --success-bg: rgba(22,163,74,0.12);
+  --error:      #dc2626;
+  --error-bg:   rgba(220,38,38,0.12);
+  --warning:    #d97706;
+  --warning-bg: rgba(217,119,6,0.12);
+  --info:       #0B7EFF;
+  --info-bg:    rgba(11,126,255,0.12);
+  --font-display:'Barlow Condensed',sans-serif;
+  --font-body:   'Outfit',sans-serif;
+  --font-mono:   'DM Mono',monospace;
+  --ease-out:    cubic-bezier(0.16,1,0.3,1);
+  --ease-in:     cubic-bezier(0.4,0,1,1);
+  --ease-std:    cubic-bezier(0.4,0,0.2,1);
+  --dur-fast:    120ms;
+  --dur-std:     220ms;
+  --dur-slow:    400ms;
+  --dur-xslow:   700ms;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--ink);color:var(--white);font-size:15px;line-height:1.6;}
+
+/* ── NAV SIDEBAR ── */
+.sidebar{
+  position:fixed;top:0;left:0;width:240px;height:100vh;
+  background:#020810;border-right:1px solid #0d1e38;
+  overflow-y:auto;z-index:100;display:flex;flex-direction:column;
+}
+.sidebar-logo{padding:28px 24px 20px;border-bottom:1px solid #0d1e38;}
+.sidebar-version{font-family:var(--font-mono);font-size:9px;color:var(--blue);letter-spacing:0.25em;text-transform:uppercase;margin-bottom:10px;}
+.sidebar-brand{font-family:var(--font-display);font-size:15px;font-weight:900;color:white;letter-spacing:0.06em;line-height:1.1;}
+.sidebar-nav{flex:1;padding:16px 0;}
+.sidebar-group-label{
+  font-family:var(--font-mono);font-size:9px;font-weight:700;
+  letter-spacing:0.25em;text-transform:uppercase;color:#0d1e38;
+  padding:20px 24px 8px;
+}
+.sidebar-link{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 24px;text-decoration:none;
+  font-family:var(--font-display);font-size:14px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-600);
+  transition:color var(--dur-std) var(--ease-std),background var(--dur-std) var(--ease-std);
+  border-left:2px solid transparent;
+}
+.sidebar-link:hover{color:var(--gray-400);background:rgba(11,126,255,0.04);}
+.sidebar-link.active{color:var(--blue);border-left-color:var(--blue);background:rgba(11,126,255,0.06);}
+.sidebar-num{font-family:var(--font-mono);font-size:10px;color:var(--navy);letter-spacing:0.1em;min-width:24px;}
+.sidebar-link.active .sidebar-num{color:var(--blue);}
+.sidebar-footer{padding:20px 24px;border-top:1px solid #0d1e38;font-family:var(--font-mono);font-size:9px;color:#0d1e38;letter-spacing:0.15em;text-transform:uppercase;}
+
+/* ── MAIN ── */
+.main{margin-left:240px;}
+
+/* ── COVER ── */
+.cover{
+  min-height:100vh;background:var(--ink);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  position:relative;overflow:hidden;padding:80px 100px;
+}
+.cover-grid{
+  position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(11,126,255,0.035) 80px),
+    repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(11,126,255,0.035) 80px);
+}
+.cover-glow{
+  position:absolute;width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(11,126,255,0.08),transparent 70%);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.cover-content{position:relative;z-index:2;text-align:center;}
+.cover-eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:var(--blue);margin-bottom:56px;}
+.cover-mark{margin-bottom:48px;}
+.cover-title{font-family:var(--font-display);font-size:88px;font-weight:900;letter-spacing:0.04em;color:white;line-height:0.9;margin-bottom:12px;}
+.cover-title em{font-style:normal;color:var(--blue);}
+.cover-sub{font-family:var(--font-body);font-size:13px;color:var(--gray-600);letter-spacing:0.3em;text-transform:uppercase;margin-bottom:64px;}
+.cover-rule{width:1px;height:56px;background:linear-gradient(to bottom,transparent,var(--blue),transparent);margin:0 auto 36px;}
+.cover-meta{display:flex;gap:48px;justify-content:center;font-family:var(--font-mono);font-size:10px;color:var(--gray-700);letter-spacing:0.15em;text-transform:uppercase;}
+.cover-meta strong{color:var(--gray-400);font-weight:500;}
+
+/* ── SECTIONS ── */
+.section{padding:100px 100px;border-bottom:1px solid #0d1e38;position:relative;}
+.section-num{position:absolute;top:60px;right:100px;font-family:var(--font-mono);font-size:10px;color:var(--blue);letter-spacing:0.2em;}
+.section-eyebrow{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.4em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+.section-title{font-family:var(--font-display);font-size:68px;font-weight:900;letter-spacing:0.03em;line-height:0.92;color:white;margin-bottom:24px;}
+.section-intro{font-family:var(--font-body);font-size:16px;color:var(--gray-400);line-height:1.7;max-width:720px;margin-bottom:60px;}
+
+/* ── UTILITY ── */
+.block-label{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--blue);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.block-label::before{content:'';width:24px;height:1.5px;background:var(--blue);}
+.mt-sm{margin-top:32px;}
+.mt-md{margin-top:48px;}
+.mt-lg{margin-top:64px;}
+
+.card{background:#020810;border:1px solid #0d1e38;padding:36px;}
+.code{background:#010609;border:1px solid #0d1e38;padding:28px 32px;font-family:var(--font-mono);font-size:12px;line-height:1.9;color:var(--gray-400);overflow-x:auto;margin-top:4px;}
+.code .c{color:var(--gray-700);}
+.code .p{color:var(--blue-soft);}
+.code .v{color:white;}
+.code .s{color:var(--blue);}
+.code .k{color:#e879f9;}
+.code .n{color:#34d399;}
+
+/* ── 01 LOGO (kept minimal - same as v1) ── */
+.logo-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;}
+.logo-tile{padding:50px 30px 26px;display:flex;flex-direction:column;align-items:center;border:1px solid #0d1e38;}
+.logo-tile.dark{background:var(--ink);}
+.logo-tile.mid{background:var(--navy-deep);}
+.logo-tile.light{background:var(--off-white);}
+.logo-tile-lbl{margin-top:20px;font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;}
+.logo-tile.dark .logo-tile-lbl,.logo-tile.mid .logo-tile-lbl{color:var(--gray-400);}
+.logo-tile.light .logo-tile-lbl{color:var(--gray-700);}
+
+/* ── 02 COLOR ── */
+.color-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;}
+.color-card{background:#020810;border:1px solid #0d1e38;}
+.color-swatch{height:120px;}
+.color-body{padding:18px 20px;}
+.color-name{font-family:var(--font-display);font-size:15px;font-weight:800;color:white;letter-spacing:0.04em;}
+.color-hex{font-family:var(--font-mono);font-size:12px;color:var(--blue);margin:4px 0 12px;letter-spacing:0.05em;}
+.color-use{font-size:12px;color:var(--gray-400);line-height:1.55;}
+.color-vals{font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-top:10px;padding-top:10px;border-top:1px solid #0d1e38;display:flex;flex-direction:column;gap:2px;}
+
+/* ── 03 TYPE ── */
+.type-block{background:#020810;border:1px solid #0d1e38;padding:50px;margin-bottom:4px;}
+.type-specimen{font-family:var(--font-display);font-size:100px;font-weight:900;color:white;line-height:0.9;letter-spacing:0.02em;margin-bottom:28px;}
+.type-specimen em{font-style:normal;color:var(--blue);}
+.type-row{display:grid;grid-template-columns:90px 1fr;gap:24px;padding:14px 0;border-bottom:1px solid #0d1e38;align-items:baseline;}
+.type-row:last-child{border-bottom:none;}
+.type-meta{font-family:var(--font-mono);font-size:10px;color:var(--gray-600);letter-spacing:0.1em;}
+.scale-table{background:#020810;border:1px solid #0d1e38;}
+.scale-row{display:grid;grid-template-columns:140px 1fr 80px 110px 80px;padding:18px 28px;align-items:baseline;border-bottom:1px solid #0d1e38;}
+.scale-row:last-child{border-bottom:none;}
+.scale-row.head{background:var(--ink);font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray-600);}
+.scale-el{font-family:var(--font-display);font-size:11px;font-weight:700;color:white;letter-spacing:0.1em;text-transform:uppercase;}
+.scale-spec{font-family:var(--font-mono);font-size:10px;color:var(--gray-400);}
+
+/* ── 04 INTERACTION STATES ── */
+.state-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;}
+.state-card{background:#020810;border:1px solid #0d1e38;padding:36px;}
+.state-label{font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--blue);margin-bottom:20px;}
+.state-label.hover{color:#f59e0b;}
+.state-label.focus{color:#a855f7;}
+.state-label.active{color:#10b981;}
+.state-label.disabled{color:var(--gray-600);}
+.state-label.error{color:#ef4444;}
+
+/* Interactive demos */
+.btn-demo-primary{background:var(--blue);color:white;font-family:var(--font-display);font-size:13px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;padding:14px 30px;border:none;cursor:pointer;transition:background var(--dur-std) var(--ease-std),transform var(--dur-fast) var(--ease-out);}
+.btn-demo-primary:hover{background:var(--blue-hover);}
+.btn-demo-primary:active{transform:scale(0.97);}
+.btn-demo-primary:focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
+.btn-demo-primary:disabled{background:var(--gray-700);color:var(--gray-600);cursor:not-allowed;}
+
+.btn-demo-secondary{background:transparent;color:white;font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;padding:14px 30px;border:1px solid var(--navy);cursor:pointer;transition:border-color var(--dur-std),color var(--dur-std);}
+.btn-demo-secondary:hover{border-color:var(--blue);color:var(--blue);}
+.btn-demo-secondary:focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
+
+.nav-link-demo{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray-400);text-decoration:none;padding-bottom:4px;border-bottom:2px solid transparent;transition:color var(--dur-std),border-color var(--dur-std);display:inline-block;}
+.nav-link-demo:hover{color:white;}
+.nav-link-demo.nav-active{color:white;border-bottom-color:var(--blue);}
+
+.card-demo{background:var(--ink);border:1px solid #0d1e38;border-top:3px solid transparent;padding:28px;transition:border-top-color var(--dur-std) var(--ease-std),transform var(--dur-std) var(--ease-out);cursor:pointer;}
+.card-demo:hover{border-top-color:var(--blue);transform:translateY(-3px);}
+
+.input-demo{background:var(--ink);border:1px solid var(--navy);color:white;font-family:var(--font-body);font-size:14px;padding:13px 16px;width:100%;outline:none;transition:border-color var(--dur-std);display:block;}
+.input-demo:focus{border-color:var(--blue);}
+.input-demo.input-error{border-color:var(--error);}
+.input-demo.input-success{border-color:var(--success);}
+.input-demo:disabled{background:#0a1320;color:var(--gray-600);cursor:not-allowed;}
+
+/* ── 05 MOTION ── */
+.motion-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;}
+.motion-card{background:#020810;border:1px solid #0d1e38;padding:32px;cursor:pointer;}
+.motion-demo-box{width:48px;height:48px;background:var(--blue);margin:20px auto 0;}
+.motion-title{font-family:var(--font-display);font-size:17px;font-weight:800;color:white;letter-spacing:0.04em;margin-bottom:8px;}
+.motion-meta{font-family:var(--font-mono);font-size:10px;color:var(--blue);letter-spacing:0.1em;margin-bottom:4px;}
+.motion-desc{font-size:13px;color:var(--gray-400);line-height:1.6;}
+
+/* Page load animation */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes slideRight{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+@keyframes spin{to{transform:rotate(360deg);}}
+@keyframes shimmer{from{background-position:-1000px 0;}to{background-position:1000px 0;}}
+
+.anim-fadeup{animation:fadeUp var(--dur-xslow) var(--ease-out) both;}
+.anim-fadein{animation:fadeIn var(--dur-xslow) var(--ease-out) both;}
+
+/* ── 06 SEMANTIC + FORM STATES ── */
+.semantic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:4px;}
+.semantic-card{padding:24px 20px;border:1px solid;}
+.semantic-card.success{background:var(--success-bg);border-color:rgba(22,163,74,0.3);}
+.semantic-card.error{background:var(--error-bg);border-color:rgba(220,38,38,0.3);}
+.semantic-card.warning{background:var(--warning-bg);border-color:rgba(217,119,6,0.3);}
+.semantic-card.info{background:var(--info-bg);border-color:rgba(11,126,255,0.3);}
+.semantic-label{font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:10px;}
+.semantic-card.success .semantic-label{color:var(--success);}
+.semantic-card.error .semantic-label{color:var(--error);}
+.semantic-card.warning .semantic-label{color:var(--warning);}
+.semantic-card.info .semantic-label{color:var(--info);}
+.semantic-text{font-size:13px;line-height:1.55;}
+.semantic-card.success .semantic-text{color:rgba(255,255,255,0.7);}
+.semantic-card.error .semantic-text{color:rgba(255,255,255,0.7);}
+.semantic-card.warning .semantic-text{color:rgba(255,255,255,0.7);}
+.semantic-card.info .semantic-text{color:rgba(255,255,255,0.7);}
+
+.form-states-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.form-field{display:flex;flex-direction:column;gap:7px;}
+.form-label-txt{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray-400);}
+.form-hint{font-family:var(--font-body);font-size:12px;}
+.form-hint.hint-error{color:var(--error);}
+.form-hint.hint-success{color:var(--success);}
+
+/* ── 07 LOADING STATES ── */
+.skeleton{background:linear-gradient(90deg,#0d1e38 25%,#163366 50%,#0d1e38 75%);background-size:1000px 100%;animation:shimmer 1.6s infinite linear;border-radius:2px;}
+.loading-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+.loading-card{background:#020810;border:1px solid #0d1e38;padding:36px;}
+
+/* Spinner */
+.spinner{width:32px;height:32px;border:2.5px solid rgba(11,126,255,0.2);border-top-color:var(--blue);border-radius:50%;animation:spin 0.8s linear infinite;display:inline-block;}
+.spinner-sm{width:20px;height:20px;border-width:2px;}
+
+/* Progress */
+.progress-track{height:3px;background:#0d1e38;width:100%;position:relative;overflow:hidden;}
+.progress-bar{height:100%;background:var(--blue);position:absolute;left:0;top:0;transition:width 0.3s var(--ease-std);}
+.progress-indeterminate{height:100%;background:var(--blue);position:absolute;animation:progress-move 1.4s infinite ease-in-out;width:40%;}
+@keyframes progress-move{0%{left:-40%;}100%{left:100%;}}
+
+/* ── 08 ACCESSIBILITY ── */
+.a11y-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+.a11y-card{background:#020810;border:1px solid #0d1e38;padding:36px;}
+.contrast-row{display:flex;align-items:center;gap:20px;padding:14px 0;border-bottom:1px solid #0d1e38;}
+.contrast-row:last-child{border-bottom:none;}
+.contrast-swatch{width:60px;height:36px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:14px;font-weight:800;letter-spacing:0.05em;flex-shrink:0;}
+.contrast-info{flex:1;font-size:13px;color:var(--gray-400);}
+.contrast-ratio{font-family:var(--font-mono);font-size:16px;font-weight:500;min-width:50px;}
+.badge-pass{background:var(--success-bg);color:var(--success);font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:0.2em;padding:3px 8px;}
+.badge-fail{background:var(--error-bg);color:var(--error);font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:0.2em;padding:3px 8px;}
+
+/* ── 09 MOBILE ── */
+.mobile-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;}
+.mobile-frame{background:#020810;border:1px solid #0d1e38;}
+.mobile-screen-lbl{font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--blue);padding:16px 20px;border-bottom:1px solid #0d1e38;}
+.mobile-screen{padding:0;background:var(--ink);}
+
+/* Mobile nav */
+.m-nav{background:var(--ink);height:52px;display:flex;align-items:center;padding:0 20px;justify-content:space-between;border-bottom:1px solid #0d1e38;}
+.m-hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;}
+.m-hamburger span{width:22px;height:2px;background:white;display:block;}
+
+/* Mobile hero */
+.m-hero{padding:40px 20px 36px;background:var(--ink);}
+.m-hero h1{font-family:var(--font-display);font-size:44px;font-weight:900;color:white;letter-spacing:0.02em;line-height:0.92;margin-bottom:16px;}
+.m-hero h1 em{font-style:normal;color:var(--blue);}
+.m-hero p{font-size:13px;color:var(--gray-400);line-height:1.6;margin-bottom:24px;}
+.m-btn{background:var(--blue);color:white;font-family:var(--font-display);font-size:12px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;padding:14px 24px;border:none;width:100%;text-align:center;}
+
+/* Drawer nav */
+.m-drawer{background:#020810;border-bottom:1px solid #0d1e38;}
+.m-drawer-link{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;font-family:var(--font-display);font-size:15px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-400);border-bottom:1px solid #0d1e38;}
+.m-drawer-link:last-child{border-bottom:none;}
+.m-drawer-cta{background:var(--blue);color:white;text-align:center;padding:16px;font-family:var(--font-display);font-size:13px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;}
+
+/* Mobile card */
+.m-card{background:var(--navy-deep);border-top:2px solid var(--blue);padding:20px;margin:0 16px 16px;}
+.m-card-title{font-family:var(--font-display);font-size:18px;font-weight:800;color:white;letter-spacing:0.03em;margin-bottom:6px;}
+.m-card-text{font-size:12px;color:var(--gray-400);line-height:1.55;}
+
+/* Mobile bottom bar */
+.m-bottom-bar{background:#020810;border-top:1px solid #0d1e38;display:flex;padding:10px 0 6px;}
+.m-tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;font-family:var(--font-body);font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-600);}
+.m-tab.m-tab-active{color:var(--blue);}
+
+/* ── 10 PAGE TEMPLATES ── */
+.template-block{background:#020810;border:1px solid #0d1e38;margin-bottom:4px;overflow:hidden;}
+.template-header{background:var(--ink);padding:18px 28px;border-bottom:1px solid #0d1e38;display:flex;justify-content:space-between;align-items:center;}
+.template-header-label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--blue);}
+.template-header-meta{font-family:var(--font-mono);font-size:10px;color:var(--gray-600);letter-spacing:0.1em;}
+
+/* Template wireframe elements */
+.wf-nav{background:#030e1e;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;border-bottom:1px solid #0d1e38;}
+.wf-block{background:#0a1a30;border-radius:2px;}
+.wf-hero{padding:60px 40px;background:var(--ink);display:grid;gap:16px;}
+.wf-section{padding:60px 40px;background:#030e1e;display:grid;gap:20px;border-top:1px solid #0d1e38;}
+.wf-section.alt{background:var(--ink);}
+.wf-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+.wf-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.wf-card-wf{background:#0a1a30;border:1px solid #0d1e38;padding:24px;border-top:2px solid #163366;}
+.wf-footer{background:#010509;padding:50px 40px;border-top:1px solid #0d1e38;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;}
+
+/* ── 11 SEO / META ── */
+.seo-preview{background:#020810;border:1px solid #0d1e38;padding:28px 32px;margin-bottom:4px;}
+.seo-url{font-family:var(--font-mono);font-size:12px;color:var(--success);letter-spacing:0.05em;margin-bottom:6px;}
+.seo-title{font-family:var(--font-body);font-size:18px;font-weight:600;color:#8ab4f8;margin-bottom:6px;line-height:1.3;}
+.seo-desc{font-family:var(--font-body);font-size:13px;color:var(--gray-400);line-height:1.5;}
+.seo-table{width:100%;border-collapse:collapse;font-size:13px;}
+.seo-table th{font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray-600);padding:12px 16px;text-align:left;border-bottom:2px solid #0d1e38;background:var(--ink);}
+.seo-table td{padding:13px 16px;border-bottom:1px solid #0d1e38;color:var(--gray-400);vertical-align:top;}
+.seo-table td:first-child{font-family:var(--font-mono);color:var(--blue-soft);font-size:12px;width:180px;}
+.seo-table td:last-child{font-family:var(--font-mono);font-size:11px;color:var(--gray-400);}
+
+/* ── 12 ASSETS ── */
+.asset-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;}
+.asset-card{background:#020810;border:1px solid #0d1e38;padding:32px;text-align:center;}
+.asset-preview{background:var(--ink);height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;border:1px solid #0d1e38;}
+.asset-name{font-family:var(--font-display);font-size:16px;font-weight:800;color:white;letter-spacing:0.04em;margin-bottom:6px;}
+.asset-spec{font-family:var(--font-mono);font-size:10px;color:var(--gray-600);letter-spacing:0.1em;line-height:1.7;}
+
+/* ── FOOTER ── */
+.doc-footer{background:#010509;padding:60px 100px;border-top:1px solid #0d1e38;display:flex;align-items:center;justify-content:space-between;}
+.doc-footer-left{}
+.doc-footer-text{font-family:var(--font-mono);font-size:10px;color:var(--gray-700);letter-spacing:0.15em;text-transform:uppercase;line-height:2;}
+.doc-footer-text strong{color:var(--gray-400);font-weight:500;}
+
+/* Rules table */
+.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+.rules-card{background:#020810;border:1px solid #0d1e38;padding:36px;}
+.rules-tag{display:inline-block;font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;padding:4px 12px;margin-bottom:22px;}
+.rules-tag.do{background:var(--success-bg);color:var(--success);}
+.rules-tag.dont{background:var(--error-bg);color:var(--error);}
+.rules-list{display:flex;flex-direction:column;gap:13px;}
+.rules-list li{list-style:none;font-size:13px;color:var(--gray-400);padding-left:22px;position:relative;line-height:1.55;}
+.rules-list li::before{position:absolute;left:0;font-weight:800;font-size:11px;}
+.rules-list.do li::before{content:'✓';color:var(--success);}
+.rules-list.dont li::before{content:'✕';color:var(--error);}
+
+/* Sidebar active tracking */
+.js-scroll-active .sidebar-link{transition:all 0.15s;}
+</style>
+</head>
+<body>
+
+<!-- ═══ SIDEBAR ═══ -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <div class="sidebar-version">// v2.0</div>
+    <div class="sidebar-brand">DIRECT<br>PROPERTY<br>PARTNERS</div>
+  </div>
+  <div class="sidebar-nav">
+    <div class="sidebar-group-label">Foundation</div>
+    <a href="#cover"  class="sidebar-link active"><span class="sidebar-num">00</span>Cover</a>
+    <a href="#s01" class="sidebar-link"><span class="sidebar-num">01</span>Logo</a>
+    <a href="#s02" class="sidebar-link"><span class="sidebar-num">02</span>Color</a>
+    <a href="#s03" class="sidebar-link"><span class="sidebar-num">03</span>Typography</a>
+    <div class="sidebar-group-label">Behavior</div>
+    <a href="#s04" class="sidebar-link"><span class="sidebar-num">04</span>Interaction</a>
+    <a href="#s05" class="sidebar-link"><span class="sidebar-num">05</span>Motion</a>
+    <a href="#s06" class="sidebar-link"><span class="sidebar-num">06</span>Form States</a>
+    <a href="#s07" class="sidebar-link"><span class="sidebar-num">07</span>Loading States</a>
+    <div class="sidebar-group-label">Structure</div>
+    <a href="#s08" class="sidebar-link"><span class="sidebar-num">08</span>Accessibility</a>
+    <a href="#s09" class="sidebar-link"><span class="sidebar-num">09</span>Mobile</a>
+    <a href="#s10" class="sidebar-link"><span class="sidebar-num">10</span>Page Templates</a>
+    <div class="sidebar-group-label">Ship It</div>
+    <a href="#s11" class="sidebar-link"><span class="sidebar-num">11</span>SEO & Meta</a>
+    <a href="#s12" class="sidebar-link"><span class="sidebar-num">12</span>Asset Checklist</a>
+    <a href="#s13" class="sidebar-link"><span class="sidebar-num">13</span>Usage Rules</a>
+  </div>
+  <div class="sidebar-footer">DPP · BRAND V2 · 2026</div>
+</nav>
+
+<!-- ═══ MAIN ═══ -->
+<div class="main">
+
+<!-- ─── COVER ─── -->
+<div class="cover" id="cover">
+  <div class="cover-grid"></div>
+  <div class="cover-glow"></div>
+  <div class="cover-content">
+    <div class="cover-eyebrow">// brand_guidelines_v2.0 — developer_ready</div>
+    <div class="cover-mark">
+      <svg viewBox="0 0 82 84" width="140" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="36" x2="46" y2="36" stroke="white" stroke-width="8" stroke-linecap="square"/>
+        <line x1="46" y1="36" x2="46" y2="74" stroke="white" stroke-width="8" stroke-linecap="square"/>
+        <circle cx="10" cy="36" r="7" fill="white"/>
+        <circle cx="46" cy="74" r="7" fill="white"/>
+        <circle cx="46" cy="36" r="13" fill="#0B7EFF"/>
+        <circle cx="46" cy="36" r="5" fill="white"/>
+        <line x1="52" y1="30" x2="74" y2="10" stroke="#0B7EFF" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+        <circle cx="74" cy="10" r="4" fill="#0B7EFF" opacity="0.55"/>
+      </svg>
+    </div>
+    <div class="cover-title">DIRECT<br>PROPERTY<br><em>PARTNERS</em></div>
+    <div class="cover-sub">Complete Brand & Development System</div>
+    <div class="cover-rule"></div>
+    <div class="cover-meta">
+      <span><strong>Version</strong> &nbsp;2.1</span>
+      <span><strong>Sections</strong> &nbsp;14+</span>
+      <span><strong>Year</strong> &nbsp;2026</span>
+      <span><strong>Status</strong> &nbsp;Ship-ready</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════ 01 LOGO ════════════════ -->
+<section class="section" id="s01">
+  <div class="section-num">01 / 13</div>
+  <div class="section-eyebrow">// logo_system</div>
+  <h2 class="section-title">LOGO SYSTEM</h2>
+  <p class="section-intro">The Circuit Corner mark. An L-shaped trace — physical structure meets AI intelligence at the electric blue node. White arms are foundation. Blue node is technology. The secondary trace is reach expanding outward.</p>
+
+  <!-- Primary lockup -->
+  <div style="background:#020810;border:1px solid #0d1e38;padding:80px 60px;display:flex;align-items:center;justify-content:center;margin-bottom:4px;">
+    <svg viewBox="0 0 560 100" width="560" xmlns="http://www.w3.org/2000/svg">
+      <line x1="10" y1="36" x2="46" y2="36" stroke="white" stroke-width="8" stroke-linecap="square"/>
+      <line x1="46" y1="36" x2="46" y2="74" stroke="white" stroke-width="8" stroke-linecap="square"/>
+      <circle cx="10" cy="36" r="7" fill="white"/>
+      <circle cx="46" cy="74" r="7" fill="white"/>
+      <circle cx="46" cy="36" r="13" fill="#0B7EFF"/>
+      <circle cx="46" cy="36" r="5" fill="white"/>
+      <line x1="52" y1="30" x2="74" y2="10" stroke="#0B7EFF" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+      <circle cx="74" cy="10" r="4" fill="#0B7EFF" opacity="0.55"/>
+      <line x1="100" y1="10" x2="100" y2="90" stroke="#163366" stroke-width="1.5"/>
+      <text x="124" y="54" font-family="'Barlow Condensed',sans-serif" font-size="44" font-weight="900" fill="white" letter-spacing="2">DIRECT PROPERTY</text>
+      <line x1="124" y1="72" x2="162" y2="72" stroke="#0B7EFF" stroke-width="1.5"/>
+      <text x="328" y="78" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="18" font-weight="700" fill="#4DA6FF" letter-spacing="6">PARTNERS</text>
+      <line x1="494" y1="72" x2="532" y2="72" stroke="#0B7EFF" stroke-width="1.5"/>
+    </svg>
+  </div>
+
+  <!-- Variations -->
+  <div class="block-label mt-lg">Color Variations</div>
+  <div class="logo-grid-3">
+    <div class="logo-tile dark">
+      <svg viewBox="0 0 82 84" width="80" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="36" x2="46" y2="36" stroke="white" stroke-width="8" stroke-linecap="square"/>
+        <line x1="46" y1="36" x2="46" y2="74" stroke="white" stroke-width="8" stroke-linecap="square"/>
+        <circle cx="10" cy="36" r="7" fill="white"/><circle cx="46" cy="74" r="7" fill="white"/>
+        <circle cx="46" cy="36" r="13" fill="#0B7EFF"/>
+        <circle cx="46" cy="36" r="5" fill="white"/>
+        <line x1="52" y1="30" x2="74" y2="10" stroke="#0B7EFF" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+        <circle cx="74" cy="10" r="4" fill="#0B7EFF" opacity="0.55"/>
+      </svg>
+      <div class="logo-tile-lbl">Primary — Ink bg</div>
+    </div>
+    <div class="logo-tile mid">
+      <svg viewBox="0 0 82 84" width="80" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="36" x2="46" y2="36" stroke="white" stroke-width="8" stroke-linecap="square"/>
+        <line x1="46" y1="36" x2="46" y2="74" stroke="white" stroke-width="8" stroke-linecap="square"/>
+        <circle cx="10" cy="36" r="7" fill="white"/><circle cx="46" cy="74" r="7" fill="white"/>
+        <circle cx="46" cy="36" r="13" fill="#0B7EFF"/>
+        <circle cx="46" cy="36" r="5" fill="white"/>
+        <line x1="52" y1="30" x2="74" y2="10" stroke="#0B7EFF" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+        <circle cx="74" cy="10" r="4" fill="#0B7EFF" opacity="0.7"/>
+      </svg>
+      <div class="logo-tile-lbl">On Navy Deep</div>
+    </div>
+    <div class="logo-tile light">
+      <svg viewBox="0 0 82 84" width="80" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="36" x2="46" y2="36" stroke="#0B1C38" stroke-width="8" stroke-linecap="square"/>
+        <line x1="46" y1="36" x2="46" y2="74" stroke="#0B1C38" stroke-width="8" stroke-linecap="square"/>
+        <circle cx="10" cy="36" r="7" fill="#0B1C38"/><circle cx="46" cy="74" r="7" fill="#0B1C38"/>
+        <circle cx="46" cy="36" r="13" fill="#0B7EFF"/>
+        <circle cx="46" cy="36" r="5" fill="white"/>
+        <line x1="52" y1="30" x2="74" y2="10" stroke="#0B7EFF" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+        <circle cx="74" cy="10" r="4" fill="#0B7EFF" opacity="0.7"/>
+      </svg>
+      <div class="logo-tile-lbl">On Off-White</div>
+    </div>
+  </div>
+
+  <!-- Clearspace + min sizes -->
+  <div class="card mt-md" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+    <div>
+      <div class="block-label">Clearspace Rule</div>
+      <div style="position:relative;display:inline-block;border:1px dashed #1a3d7c;padding:44px;">
+        <span style="position:absolute;top:-9px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:10px;color:var(--blue);background:#020810;padding:0 6px;">X</span>
+        <span style="position:absolute;bottom:-9px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:10px;color:var(--blue);background:#020810;padding:0 6px;">X</span>
+        <span style="position:absolute;left:-9px;top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:10px;color:var(--blue);background:#020810;padding:0 4px;">X</span>
+        <span style="position:absolute;right:-9px;top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:10px;color:var(--blue);background:#020810;padding:0 4px;">X</span>
+        <svg viewBox="0 0 82 84" width="80" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="36" x2="46" y2="36" stroke="white" stroke-width="8" stroke-linecap="square"/>
+          <line x1="46" y1="36" x2="46" y2="74" stroke="white" stroke-width="8" stroke-linecap="square"/>
+          <circle cx="10" cy="36" r="7" fill="white"/><circle cx="46" cy="74" r="7" fill="white"/>
+          <circle cx="46" cy="36" r="13" fill="#0B7EFF"/>
+          <circle cx="46" cy="36" r="5" fill="white"/>
+        </svg>
+      </div>
+      <p style="font-size:13px;color:var(--gray-400);margin-top:16px;line-height:1.65;">X = height of the horizontal trace arm. Never let other elements enter this zone.</p>
+    </div>
+    <div>
+      <div class="block-label">Minimum Sizes</div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;font-size:13px;"><span style="color:var(--gray-400);">Icon only — digital</span><span style="font-family:var(--font-mono);color:white;font-size:12px;">24 × 24px</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;font-size:13px;"><span style="color:var(--gray-400);">Full lockup — digital</span><span style="font-family:var(--font-mono);color:white;font-size:12px;">180px wide</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;font-size:13px;"><span style="color:var(--gray-400);">Icon only — print</span><span style="font-family:var(--font-mono);color:white;font-size:12px;">0.25 inch</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;font-size:13px;"><span style="color:var(--gray-400);">Full lockup — print</span><span style="font-family:var(--font-mono);color:white;font-size:12px;">1.5 inch wide</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIX 1: SVG file spec -->
+  <div class="block-label mt-lg">SVG File Specification — Mark</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+    <div class="code" style="margin-top:0;">
+<span class="c">/* logo-mark.svg — exact coordinates */</span>
+&lt;<span class="s">svg</span> <span class="p">viewBox</span>=<span class="v">"0 0 82 84"</span>
+     <span class="p">xmlns</span>=<span class="v">"http://www.w3.org/2000/svg"</span>&gt;
+
+  <span class="c">&lt;!-- Horizontal trace arm --&gt;</span>
+  &lt;<span class="s">line</span> <span class="p">x1</span>=<span class="v">"10"</span> <span class="p">y1</span>=<span class="v">"36"</span> <span class="p">x2</span>=<span class="v">"46"</span> <span class="p">y2</span>=<span class="v">"36"</span>
+    <span class="p">stroke</span>=<span class="v">"white"</span> <span class="p">stroke-width</span>=<span class="v">"8"</span>
+    <span class="p">stroke-linecap</span>=<span class="v">"square"</span>/&gt;
+
+  <span class="c">&lt;!-- Vertical trace arm --&gt;</span>
+  &lt;<span class="s">line</span> <span class="p">x1</span>=<span class="v">"46"</span> <span class="p">y1</span>=<span class="v">"36"</span> <span class="p">x2</span>=<span class="v">"46"</span> <span class="p">y2</span>=<span class="v">"74"</span>
+    <span class="p">stroke</span>=<span class="v">"white"</span> <span class="p">stroke-width</span>=<span class="v">"8"</span>
+    <span class="p">stroke-linecap</span>=<span class="v">"square"</span>/&gt;
+
+  <span class="c">&lt;!-- Left terminus node --&gt;</span>
+  &lt;<span class="s">circle</span> <span class="p">cx</span>=<span class="v">"10"</span> <span class="p">cy</span>=<span class="v">"36"</span> <span class="p">r</span>=<span class="v">"7"</span> <span class="p">fill</span>=<span class="v">"white"</span>/&gt;
+
+  <span class="c">&lt;!-- Bottom terminus node --&gt;</span>
+  &lt;<span class="s">circle</span> <span class="p">cx</span>=<span class="v">"46"</span> <span class="p">cy</span>=<span class="v">"74"</span> <span class="p">r</span>=<span class="v">"7"</span> <span class="p">fill</span>=<span class="v">"white"</span>/&gt;
+
+  <span class="c">&lt;!-- AI node outer ring --&gt;</span>
+  &lt;<span class="s">circle</span> <span class="p">cx</span>=<span class="v">"46"</span> <span class="p">cy</span>=<span class="v">"36"</span> <span class="p">r</span>=<span class="v">"13"</span> <span class="p">fill</span>=<span class="v">"#0B7EFF"</span>/&gt;
+
+  <span class="c">&lt;!-- AI node inner dot --&gt;</span>
+  &lt;<span class="s">circle</span> <span class="p">cx</span>=<span class="v">"46"</span> <span class="p">cy</span>=<span class="v">"36"</span> <span class="p">r</span>=<span class="v">"5"</span> <span class="p">fill</span>=<span class="v">"white"</span>/&gt;
+
+  <span class="c">&lt;!-- Secondary reach trace --&gt;</span>
+  &lt;<span class="s">line</span> <span class="p">x1</span>=<span class="v">"52"</span> <span class="p">y1</span>=<span class="v">"30"</span> <span class="p">x2</span>=<span class="v">"74"</span> <span class="p">y2</span>=<span class="v">"10"</span>
+    <span class="p">stroke</span>=<span class="v">"#0B7EFF"</span> <span class="p">stroke-width</span>=<span class="v">"4"</span>
+    <span class="p">stroke-linecap</span>=<span class="v">"round"</span> <span class="p">opacity</span>=<span class="v">"0.55"</span>/&gt;
+
+  <span class="c">&lt;!-- Secondary reach endpoint --&gt;</span>
+  &lt;<span class="s">circle</span> <span class="p">cx</span>=<span class="v">"74"</span> <span class="p">cy</span>=<span class="v">"10"</span> <span class="p">r</span>=<span class="v">"4"</span>
+    <span class="p">fill</span>=<span class="v">"#0B7EFF"</span> <span class="p">opacity</span>=<span class="v">"0.55"</span>/&gt;
+&lt;/<span class="s">svg</span>&gt;
+    </div>
+    <div class="card" style="display:flex;flex-direction:column;gap:0;align-self:start;">
+      <div style="font-family:var(--font-display);font-size:16px;font-weight:800;color:white;letter-spacing:0.04em;margin-bottom:20px;">EXPORT NOTES</div>
+      <div style="display:flex;flex-direction:column;gap:0;font-size:13px;">
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">viewBox</span><span style="font-family:var(--font-mono);color:white;font-size:11px;">0 0 82 84</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">Trace stroke-width</span><span style="font-family:var(--font-mono);color:white;font-size:11px;">8 (square cap)</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">AI node outer r</span><span style="font-family:var(--font-mono);color:white;font-size:11px;">13</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">AI node inner r</span><span style="font-family:var(--font-mono);color:white;font-size:11px;">5</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">Reach trace width</span><span style="font-family:var(--font-mono);color:white;font-size:11px;">4 (round cap)</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">Reach opacity</span><span style="font-family:var(--font-mono);color:white;font-size:11px;">0.55</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">White elements</span><span style="font-family:var(--font-mono);color:white;font-size:11px;">#FFFFFF</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">Blue elements</span><span style="font-family:var(--font-mono);color:white;font-size:11px;">#0B7EFF</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">Light bg version</span><span style="font-family:var(--font-mono);color:white;font-size:11px;">white → #0B1C38</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;"><span style="color:var(--gray-400);">Optimise with</span><span style="font-family:var(--font-mono);color:white;font-size:11px;">SVGO</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ 02 COLOR ════════════════ -->
+<section class="section" id="s02">
+  <div class="section-num">02 / 13</div>
+  <div class="section-eyebrow">// color_system</div>
+  <h2 class="section-title">COLOR SYSTEM</h2>
+  <p class="section-intro">Dark-first. One accent. Strict usage rules. The moment you add orange, green, or purple — it's a different brand.</p>
+
+  <div class="color-grid-4">
+    <div class="color-card">
+      <div class="color-swatch" style="background:#040c1b;"></div>
+      <div class="color-body">
+        <div class="color-name">INK</div><div class="color-hex">--ink · #040C1B</div>
+        <div class="color-use">Primary bg. Hero, header, footer, default page bg. 60% of all surfaces.</div>
+        <div class="color-vals"><div>RGB 4, 12, 27</div><div>HSL 219° 74% 6%</div></div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#0B1C38;"></div>
+      <div class="color-body">
+        <div class="color-name">NAVY DEEP</div><div class="color-hex">--navy-deep · #0B1C38</div>
+        <div class="color-use">Secondary surfaces, cards, alternating sections. 25% of surfaces.</div>
+        <div class="color-vals"><div>RGB 11, 28, 56</div><div>HSL 217° 67% 13%</div></div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#163366;"></div>
+      <div class="color-body">
+        <div class="color-name">NAVY</div><div class="color-hex">--navy · #163366</div>
+        <div class="color-use">Borders, dividers, button secondary outlines. UI structure.</div>
+        <div class="color-vals"><div>RGB 22, 51, 102</div><div>HSL 218° 65% 24%</div></div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#0B7EFF;"></div>
+      <div class="color-body">
+        <div class="color-name">ELECTRIC BLUE</div><div class="color-hex">--blue · #0B7EFF</div>
+        <div class="color-use">THE accent. CTAs, links, key stats, the logo node. 5% max.</div>
+        <div class="color-vals"><div>RGB 11, 126, 255</div><div>HSL 211° 100% 52%</div></div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#0066D6;"></div>
+      <div class="color-body">
+        <div class="color-name">BLUE HOVER</div><div class="color-hex">--blue-hover · #0066D6</div>
+        <div class="color-use">Hover state on Electric Blue buttons only. Never used standalone.</div>
+        <div class="color-vals"><div>RGB 0, 102, 214</div><div>HSL 211° 100% 42%</div></div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#4DA6FF;"></div>
+      <div class="color-body">
+        <div class="color-name">BLUE SOFT</div><div class="color-hex">--blue-soft · #4DA6FF</div>
+        <div class="color-use">Subtitle text on dark. Taglines under logo. Muted link text.</div>
+        <div class="color-vals"><div>RGB 77, 166, 255</div><div>HSL 211° 100% 65%</div></div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#8A9BB5;"></div>
+      <div class="color-body">
+        <div class="color-name">GRAY 400</div><div class="color-hex">--gray-400 · #8A9BB5</div>
+        <div class="color-use">Body copy on dark. Captions, descriptions, placeholder text.</div>
+        <div class="color-vals"><div>RGB 138, 155, 181</div><div>HSL 215° 20% 63%</div></div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#f2f6fc;"></div>
+      <div class="color-body">
+        <div class="color-name">OFF WHITE</div><div class="color-hex">--off-white · #F2F6FC</div>
+        <div class="color-use">Light section backgrounds, print base, light-mode cards.</div>
+        <div class="color-vals"><div>RGB 242, 246, 252</div><div>HSL 214° 55% 97%</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Semantic colors -->
+  <div class="block-label mt-lg">Semantic Colors — UI States</div>
+  <div class="semantic-grid">
+    <div class="semantic-card success">
+      <div class="semantic-label">Success</div>
+      <div style="font-family:var(--font-mono);font-size:12px;color:#16a34a;margin-bottom:6px;">#16A34A · --success</div>
+      <div class="semantic-text">Form confirmations, positive results, completed actions. "Message sent", "Lead captured".</div>
+    </div>
+    <div class="semantic-card error">
+      <div class="semantic-label">Error</div>
+      <div style="font-family:var(--font-mono);font-size:12px;color:#dc2626;margin-bottom:6px;">#DC2626 · --error</div>
+      <div class="semantic-text">Validation failures, broken states. "Invalid email", "Required field", "Something went wrong".</div>
+    </div>
+    <div class="semantic-card warning">
+      <div class="semantic-label">Warning</div>
+      <div style="font-family:var(--font-mono);font-size:12px;color:#d97706;margin-bottom:6px;">#D97706 · --warning</div>
+      <div class="semantic-text">Non-blocking cautions. "Incomplete profile", "Action may take time", soft nudges.</div>
+    </div>
+    <div class="semantic-card info">
+      <div class="semantic-label">Info</div>
+      <div style="font-family:var(--font-mono);font-size:12px;color:#0B7EFF;margin-bottom:6px;">#0B7EFF · --blue</div>
+      <div class="semantic-text">Neutral info messages. "Here's what happens next", tips, guidance. Same as brand blue.</div>
+    </div>
+  </div>
+
+  <div class="code mt-sm">
+<span class="c">/* Color tokens — paste into :root */</span>
+<span class="s">:root</span> {
+  <span class="p">--ink</span>:        <span class="v">#040c1b</span>;    <span class="c">/* primary bg */</span>
+  <span class="p">--navy-deep</span>:  <span class="v">#0B1C38</span>;    <span class="c">/* secondary bg */</span>
+  <span class="p">--navy</span>:       <span class="v">#163366</span>;    <span class="c">/* borders */</span>
+  <span class="p">--blue</span>:       <span class="v">#0B7EFF</span>;    <span class="c">/* primary accent */</span>
+  <span class="p">--blue-hover</span>: <span class="v">#0066D6</span>;    <span class="c">/* btn hover */</span>
+  <span class="p">--blue-soft</span>:  <span class="v">#4DA6FF</span>;    <span class="c">/* muted accent */</span>
+  <span class="p">--gray-400</span>:   <span class="v">#8A9BB5</span>;    <span class="c">/* body copy */</span>
+  <span class="p">--off-white</span>:  <span class="v">#f2f6fc</span>;    <span class="c">/* light bg */</span>
+  <span class="p">--success</span>:    <span class="v">#16a34a</span>;
+  <span class="p">--error</span>:      <span class="v">#dc2626</span>;
+  <span class="p">--warning</span>:    <span class="v">#d97706</span>;
+}</span>
+  </div>
+
+  <!-- FIX 2: Dark/light section sequence -->
+  <div class="block-label mt-lg">Section Background Sequence</div>
+  <div class="card" style="margin-bottom:4px;">
+    <div style="font-size:13px;color:var(--gray-400);line-height:1.7;margin-bottom:28px;max-width:700px;">Every page follows a defined sequence of alternating backgrounds. This prevents the page from feeling like one flat blob of dark navy. The rule is: <strong style="color:white;">always start and end on Ink</strong>. Light sections break up the rhythm but never lead or close.</div>
+    <div style="display:flex;flex-direction:column;gap:2px;border:1px solid #0d1e38;overflow:hidden;">
+      <div style="display:grid;grid-template-columns:40px 140px 1fr auto;gap:20px;align-items:center;padding:16px 24px;background:var(--ink);border-bottom:1px solid #0d1e38;">
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);">01</div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:white;">--ink</div>
+        <div style="font-size:13px;color:var(--gray-400);">Nav + Hero — always Ink. This is the brand's face.</div>
+        <div style="width:14px;height:14px;background:#040c1b;border:1px solid #163366;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:40px 140px 1fr auto;gap:20px;align-items:center;padding:16px 24px;background:#030d1a;border-bottom:1px solid #0d1e38;">
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);">02</div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:white;">--navy-deep</div>
+        <div style="font-size:13px;color:var(--gray-400);">Stats bar / social proof strip — slight lift from hero</div>
+        <div style="width:14px;height:14px;background:#0B1C38;border:1px solid #163366;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:40px 140px 1fr auto;gap:20px;align-items:center;padding:16px 24px;background:#030d1a;border-bottom:1px solid #0d1e38;">
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);">03</div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:white;">--ink</div>
+        <div style="font-size:13px;color:var(--gray-400);">Services section — back to primary dark</div>
+        <div style="width:14px;height:14px;background:#040c1b;border:1px solid #163366;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:40px 140px 1fr auto;gap:20px;align-items:center;padding:16px 24px;background:#f2f6fc;border-bottom:1px solid #dde4ef;">
+        <div style="font-family:var(--font-mono);font-size:10px;color:#0B7EFF;">04</div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:#0B1C38;">--off-white</div>
+        <div style="font-size:13px;color:#3a5070;">Optional light section — testimonials, about preview. Use max once per page.</div>
+        <div style="width:14px;height:14px;background:#f2f6fc;border:1px solid #c8d5e8;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:40px 140px 1fr auto;gap:20px;align-items:center;padding:16px 24px;background:#030d1a;border-bottom:1px solid #0d1e38;">
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);">05</div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:white;">--ink</div>
+        <div style="font-size:13px;color:var(--gray-400);">CTA strip — back to dark before close</div>
+        <div style="width:14px;height:14px;background:#040c1b;border:1px solid #163366;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:40px 140px 1fr auto;gap:20px;align-items:center;padding:16px 24px;background:#030d1a;">
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);">06</div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:white;">--ink</div>
+        <div style="font-size:13px;color:var(--gray-400);">Footer — always Ink. Never light.</div>
+        <div style="width:14px;height:14px;background:#040c1b;border:1px solid #163366;"></div>
+      </div>
+    </div>
+    <div style="margin-top:14px;font-family:var(--font-mono);font-size:10px;color:var(--gray-600);letter-spacing:0.1em;">RULE: Never place two light sections back-to-back. Never end on off-white.</div>
+  </div>
+
+  <!-- FIX 3: Grid column layout -->
+  <div class="block-label mt-md">Grid Column Usage — How Layouts Divide</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:16px;letter-spacing:0.15em;">HERO — 2-COLUMN SPLIT</div>
+      <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:4px;height:48px;margin-bottom:12px;">
+        <div style="grid-column:1/8;background:rgba(11,126,255,0.25);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;color:var(--blue);">cols 1–7 · headline + body</div>
+        <div style="grid-column:8/13;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;color:var(--gray-600);">cols 8–12 · card/visual</div>
+      </div>
+      <div style="font-size:12px;color:var(--gray-400);">Left side takes 7 of 12 cols. Right panel takes 5. Gives text room to breathe without the visual feeling squeezed.</div>
+    </div>
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:16px;letter-spacing:0.15em;">SERVICES — 3-COLUMN CARD GRID</div>
+      <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:4px;height:48px;margin-bottom:12px;">
+        <div style="grid-column:1/5;background:rgba(11,126,255,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;color:var(--blue);">cols 1–4</div>
+        <div style="grid-column:5/9;background:rgba(11,126,255,0.25);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;color:var(--blue);">cols 5–8</div>
+        <div style="grid-column:9/13;background:rgba(11,126,255,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;color:var(--blue);">cols 9–12</div>
+      </div>
+      <div style="font-size:12px;color:var(--gray-400);">Equal thirds, 24px gap. On tablet (768px): stack to 2+1. On mobile: full width single column.</div>
+    </div>
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:16px;letter-spacing:0.15em;">ABOUT / 2-COL EQUAL</div>
+      <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:4px;height:48px;margin-bottom:12px;">
+        <div style="grid-column:1/7;background:rgba(11,126,255,0.2);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;color:var(--blue);">cols 1–6</div>
+        <div style="grid-column:7/13;background:rgba(11,126,255,0.2);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;color:var(--blue);">cols 7–12</div>
+      </div>
+      <div style="font-size:12px;color:var(--gray-400);">Perfect halves. Used for text + image, or two equal content blocks.</div>
+    </div>
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:16px;letter-spacing:0.15em;">STAT ROW — 4-COLUMN</div>
+      <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:4px;height:48px;margin-bottom:12px;">
+        <div style="grid-column:1/4;background:rgba(11,126,255,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;color:var(--blue);">1–3</div>
+        <div style="grid-column:4/7;background:rgba(11,126,255,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;color:var(--blue);">4–6</div>
+        <div style="grid-column:7/10;background:rgba(11,126,255,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;color:var(--blue);">7–9</div>
+        <div style="grid-column:10/13;background:rgba(11,126,255,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:9px;color:var(--blue);">10–12</div>
+      </div>
+      <div style="font-size:12px;color:var(--gray-400);">Quarter splits for metrics strip. On mobile: 2×2 grid, not 4-in-a-row.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ 03 TYPOGRAPHY ════════════════ -->
+<section class="section" id="s03">
+  <div class="section-num">03 / 13</div>
+  <div class="section-eyebrow">// typography</div>
+  <h2 class="section-title">TYPOGRAPHY</h2>
+  <p class="section-intro">Three roles, three families. Never mix them at the same size. Never use system fonts as fallbacks in production — always load from Google Fonts.</p>
+
+  <div class="type-block">
+    <div style="display:flex;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid #0d1e38;margin-bottom:32px;align-items:baseline;">
+      <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--blue);">Display · Headlines · Buttons</span>
+      <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">Barlow Condensed</span>
+    </div>
+    <div class="type-specimen">BARLOW<br><em>CONDENSED</em></div>
+    <div class="type-row"><div class="type-meta">900 · Black</div><div style="font-family:var(--font-display);font-size:30px;font-weight:900;color:white;letter-spacing:0.02em;">Hero Headlines, Section Titles</div></div>
+    <div class="type-row"><div class="type-meta">800 · ExtraBold</div><div style="font-family:var(--font-display);font-size:26px;font-weight:800;color:white;letter-spacing:0.02em;">Card Titles, Subheadings</div></div>
+    <div class="type-row"><div class="type-meta">700 · Bold</div><div style="font-family:var(--font-display);font-size:22px;font-weight:700;color:white;letter-spacing:0.03em;">Navigation Links, Labels</div></div>
+    <div class="type-row"><div class="type-meta">600 · SemiBold</div><div style="font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--gray-400);letter-spacing:0.04em;">Supporting Subtext</div></div>
+  </div>
+
+  <div class="type-block">
+    <div style="display:flex;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid #0d1e38;margin-bottom:32px;align-items:baseline;">
+      <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--blue);">Body · Paragraphs · UI Copy</span>
+      <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">Outfit</span>
+    </div>
+    <div style="font-family:var(--font-body);font-size:80px;font-weight:300;color:white;line-height:0.9;letter-spacing:-0.02em;margin-bottom:28px;">Outfit</div>
+    <div class="type-row"><div class="type-meta">600</div><div style="font-family:var(--font-body);font-size:17px;font-weight:600;color:white;">Inline emphasis, key callouts</div></div>
+    <div class="type-row"><div class="type-meta">500</div><div style="font-family:var(--font-body);font-size:17px;font-weight:500;color:white;">Form labels, nav links, small caps</div></div>
+    <div class="type-row"><div class="type-meta">400</div><div style="font-family:var(--font-body);font-size:17px;font-weight:400;color:var(--gray-400);">Default paragraph — the workhorse. 16px on web, 1.65 line-height.</div></div>
+    <div class="type-row"><div class="type-meta">300</div><div style="font-family:var(--font-body);font-size:17px;font-weight:300;color:var(--gray-400);">Large pull quotes, hero subheadlines, display body</div></div>
+  </div>
+
+  <div class="type-block">
+    <div style="display:flex;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid #0d1e38;margin-bottom:32px;align-items:baseline;">
+      <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--blue);">Mono · Numbers · Labels · Code</span>
+      <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">DM Mono</span>
+    </div>
+    <div style="font-family:var(--font-mono);font-size:80px;font-weight:500;color:white;line-height:0.9;letter-spacing:-0.02em;margin-bottom:28px;">DM_Mono</div>
+    <div class="type-row"><div class="type-meta">500</div><div style="font-family:var(--font-mono);font-size:16px;font-weight:500;color:white;">// 47 leads · #1 rank · 312 automations</div></div>
+    <div class="type-row"><div class="type-meta">400</div><div style="font-family:var(--font-mono);font-size:13px;color:var(--gray-400);letter-spacing:0.1em;">SECTION 03 / TYPOGRAPHY · 13 SECTIONS TOTAL</div></div>
+  </div>
+
+  <!-- Scale table -->
+  <div class="block-label mt-lg">Type Scale Reference</div>
+  <div class="scale-table">
+    <div class="scale-row head"><div>Element</div><div>Preview</div><div>Size</div><div>Font / Weight</div><div>Color</div></div>
+    <div class="scale-row"><div class="scale-el">H1 Hero</div><div style="font-family:var(--font-display);font-size:34px;font-weight:900;color:white;letter-spacing:0.02em;line-height:0.95;">Hero</div><div class="scale-spec">72–96px</div><div class="scale-spec">Barlow / 900</div><div class="scale-spec">--white</div></div>
+    <div class="scale-row"><div class="scale-el">H2 Section</div><div style="font-family:var(--font-display);font-size:26px;font-weight:900;color:white;">Section</div><div class="scale-spec">48–60px</div><div class="scale-spec">Barlow / 900</div><div class="scale-spec">--white</div></div>
+    <div class="scale-row"><div class="scale-el">H3 Card</div><div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:white;">Card Title</div><div class="scale-spec">20–24px</div><div class="scale-spec">Barlow / 800</div><div class="scale-spec">--white</div></div>
+    <div class="scale-row"><div class="scale-el">Eyebrow</div><div style="font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--blue);">LABEL</div><div class="scale-spec">10–11px</div><div class="scale-spec">Outfit / 600</div><div class="scale-spec">--blue</div></div>
+    <div class="scale-row"><div class="scale-el">Body Lg</div><div style="font-family:var(--font-body);font-size:17px;color:var(--gray-400);">Hero subtext</div><div class="scale-spec">17px</div><div class="scale-spec">Outfit / 400</div><div class="scale-spec">--gray-400</div></div>
+    <div class="scale-row"><div class="scale-el">Body</div><div style="font-family:var(--font-body);font-size:15px;color:var(--gray-400);">Default paragraph</div><div class="scale-spec">15px</div><div class="scale-spec">Outfit / 400</div><div class="scale-spec">--gray-400</div></div>
+    <div class="scale-row"><div class="scale-el">Mono Tag</div><div style="font-family:var(--font-mono);font-size:11px;color:var(--blue);">// 01 / DATA</div><div class="scale-spec">10–12px</div><div class="scale-spec">DM Mono / 500</div><div class="scale-spec">--blue</div></div>
+    <div class="scale-row"><div class="scale-el">Button</div><div style="font-family:var(--font-display);font-size:13px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;">GET STARTED</div><div class="scale-spec">12–13px</div><div class="scale-spec">Barlow / 800</div><div class="scale-spec">--white</div></div>
+  </div>
+</section>
+
+
+<!-- ════════════════ 04 INTERACTION ════════════════ -->
+<section class="section" id="s04">
+  <div class="section-num">04 / 13</div>
+  <div class="section-eyebrow">// interaction_states</div>
+  <h2 class="section-title">INTERACTION STATES</h2>
+  <p class="section-intro">Every interactive element has six states. Hover and focus are non-negotiable. Hover over elements below to see them live.</p>
+
+  <!-- Buttons -->
+  <div class="block-label">Buttons — All States</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
+    <div class="card">
+      <div class="state-label">DEFAULT</div>
+      <button class="btn-demo-primary">Primary CTA</button>
+    </div>
+    <div class="card" style="background:rgba(245,158,11,0.05);border-color:rgba(245,158,11,0.2);">
+      <div class="state-label hover">HOVER</div>
+      <button class="btn-demo-primary" style="background:var(--blue-hover);">Primary CTA</button>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-top:12px;letter-spacing:0.1em;">background → --blue-hover</div>
+    </div>
+    <div class="card" style="background:rgba(168,85,247,0.05);border-color:rgba(168,85,247,0.2);">
+      <div class="state-label focus">FOCUS</div>
+      <button class="btn-demo-primary" style="outline:2px solid var(--blue);outline-offset:3px;">Primary CTA</button>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-top:12px;letter-spacing:0.1em;">outline: 2px solid --blue · offset: 3px</div>
+    </div>
+    <div class="card" style="background:rgba(16,185,129,0.05);border-color:rgba(16,185,129,0.2);">
+      <div class="state-label active">ACTIVE / PRESSED</div>
+      <button class="btn-demo-primary" style="transform:scale(0.97);">Primary CTA</button>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-top:12px;letter-spacing:0.1em;">transform: scale(0.97)</div>
+    </div>
+    <div class="card">
+      <div class="state-label" style="color:var(--gray-600);">DISABLED</div>
+      <button class="btn-demo-primary" disabled>Primary CTA</button>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-top:12px;letter-spacing:0.1em;">bg → --gray-700 · cursor: not-allowed</div>
+    </div>
+    <div class="card">
+      <div class="state-label">LOADING</div>
+      <button class="btn-demo-primary" style="display:flex;align-items:center;gap:10px;"><span class="spinner spinner-sm"></span>Loading...</button>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-top:12px;letter-spacing:0.1em;">spinner + label · disable click</div>
+    </div>
+  </div>
+
+  <!-- Nav links -->
+  <div class="block-label mt-lg">Navigation Links</div>
+  <div class="card" style="display:flex;gap:40px;align-items:center;flex-wrap:wrap;">
+    <div style="text-align:center;">
+      <a class="nav-link-demo">Services</a>
+      <div style="font-family:var(--font-mono);font-size:9px;color:var(--gray-600);margin-top:10px;letter-spacing:0.15em;">DEFAULT</div>
+    </div>
+    <div style="text-align:center;">
+      <a class="nav-link-demo" style="color:white;">Services</a>
+      <div style="font-family:var(--font-mono);font-size:9px;color:var(--gray-600);margin-top:10px;letter-spacing:0.15em;">HOVER</div>
+    </div>
+    <div style="text-align:center;">
+      <a class="nav-link-demo nav-active">Services</a>
+      <div style="font-family:var(--font-mono);font-size:9px;color:var(--gray-600);margin-top:10px;letter-spacing:0.15em;">ACTIVE PAGE</div>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="block-label mt-lg">Service Cards</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+    <div class="card-demo">
+      <div style="font-family:var(--font-mono);font-size:9px;color:var(--gray-700);margin-bottom:16px;letter-spacing:0.15em;">DEFAULT STATE</div>
+      <div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:white;letter-spacing:0.03em;margin-bottom:8px;">Web Design</div>
+      <div style="font-size:13px;color:var(--gray-400);line-height:1.6;">Hover to see state change</div>
+    </div>
+    <div class="card-demo" style="border-top-color:var(--blue);transform:translateY(-3px);">
+      <div style="font-family:var(--font-mono);font-size:9px;color:var(--blue);margin-bottom:16px;letter-spacing:0.15em;">HOVER STATE</div>
+      <div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:white;letter-spacing:0.03em;margin-bottom:8px;">Web Design</div>
+      <div style="font-size:13px;color:var(--gray-400);line-height:1.6;">border-top → blue · translateY(-3px)</div>
+    </div>
+    <div class="card-demo" style="outline:2px solid var(--blue);outline-offset:0;">
+      <div style="font-family:var(--font-mono);font-size:9px;color:#a855f7;margin-bottom:16px;letter-spacing:0.15em;">FOCUS STATE</div>
+      <div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:white;letter-spacing:0.03em;margin-bottom:8px;">Web Design</div>
+      <div style="font-size:13px;color:var(--gray-400);line-height:1.6;">outline: 2px solid --blue</div>
+    </div>
+  </div>
+
+  <!-- CSS for states -->
+  <div class="code mt-sm">
+<span class="c">/* ── INTERACTION STATE SYSTEM ── */</span>
+<span class="s">.btn-primary</span>                { <span class="p">background</span>: <span class="v">var(--blue)</span>; <span class="p">transition</span>: <span class="v">background 220ms ease, transform 120ms ease</span>; }
+<span class="s">.btn-primary:hover</span>           { <span class="p">background</span>: <span class="v">var(--blue-hover)</span>; }
+<span class="s">.btn-primary:active</span>          { <span class="p">transform</span>: <span class="v">scale(0.97)</span>; }
+<span class="s">.btn-primary:focus-visible</span>   { <span class="p">outline</span>: <span class="v">2px solid var(--blue)</span>; <span class="p">outline-offset</span>: <span class="v">3px</span>; }
+<span class="s">.btn-primary:disabled</span>        { <span class="p">background</span>: <span class="v">var(--gray-700)</span>; <span class="p">cursor</span>: <span class="v">not-allowed</span>; <span class="p">opacity</span>: <span class="v">0.5</span>; }
+
+<span class="s">.card:hover</span>                  { <span class="p">border-top-color</span>: <span class="v">var(--blue)</span>; <span class="p">transform</span>: <span class="v">translateY(-3px)</span>; }
+<span class="s">.nav-link.active</span>             { <span class="p">color</span>: <span class="v">white</span>; <span class="p">border-bottom</span>: <span class="v">2px solid var(--blue)</span>; }
+<span class="s">input:focus</span>                  { <span class="p">border-color</span>: <span class="v">var(--blue)</span>; <span class="p">outline</span>: <span class="v">none</span>; }
+  </div>
+</section>
+
+
+<!-- ════════════════ 05 MOTION ════════════════ -->
+<section class="section" id="s05">
+  <div class="section-num">05 / 13</div>
+  <div class="section-eyebrow">// motion_system</div>
+  <h2 class="section-title">MOTION</h2>
+  <p class="section-intro">Sharp, purposeful animation. Fast in, slightly slower out. One page-load orchestration matters more than a dozen micro-animations. Never animate things that don't need it.</p>
+
+  <!-- Timing tokens -->
+  <div class="block-label">Timing Tokens</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:4px;">
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:6px;">--dur-fast</div>
+      <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:white;">120ms</div>
+      <div style="font-size:12px;color:var(--gray-400);margin-top:8px;">Button press, icon swap, micro-feedback</div>
+    </div>
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:6px;">--dur-std</div>
+      <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:white;">220ms</div>
+      <div style="font-size:12px;color:var(--gray-400);margin-top:8px;">Hover states, border transitions, color fades</div>
+    </div>
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:6px;">--dur-slow</div>
+      <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:white;">400ms</div>
+      <div style="font-size:12px;color:var(--gray-400);margin-top:8px;">Card reveals, menu open, panel slides</div>
+    </div>
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:6px;">--dur-xslow</div>
+      <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:white;">700ms</div>
+      <div style="font-size:12px;color:var(--gray-400);margin-top:8px;">Page load stagger, hero entrance, scroll reveals</div>
+    </div>
+  </div>
+
+  <!-- Easing -->
+  <div class="block-label mt-md">Easing Curves</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:4px;">
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:4px;">--ease-out</div>
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--gray-600);margin-bottom:14px;">cubic-bezier(0.16,1,0.3,1)</div>
+      <div style="font-size:13px;color:var(--gray-400);line-height:1.6;"><strong style="color:white;">Primary easing.</strong> Fast start, smooth deceleration. Use for elements entering the viewport (slide-in, fade-up).</div>
+    </div>
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:4px;">--ease-std</div>
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--gray-600);margin-bottom:14px;">cubic-bezier(0.4,0,0.2,1)</div>
+      <div style="font-size:13px;color:var(--gray-400);line-height:1.6;"><strong style="color:white;">Standard transitions.</strong> Balanced for hover states, background color changes, border animations.</div>
+    </div>
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:4px;">--ease-in</div>
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--gray-600);margin-bottom:14px;">cubic-bezier(0.4,0,1,1)</div>
+      <div style="font-size:13px;color:var(--gray-400);line-height:1.6;"><strong style="color:white;">Exit transitions.</strong> Elements leaving the screen. Use sparingly — most exits should just be instant.</div>
+    </div>
+  </div>
+
+  <!-- Page load -->
+  <div class="block-label mt-md">Page Load Orchestration</div>
+  <div class="card">
+    <div style="font-size:13px;color:var(--gray-400);line-height:1.7;margin-bottom:28px;max-width:700px;">On every page, stagger the entrance of key elements. This creates a feeling of the page "assembling" which reinforces the tech-forward, AI brand. Use <code style="font-family:var(--font-mono);color:var(--blue);font-size:12px;">animation-delay</code> rather than JS where possible.</div>
+    <div style="display:flex;flex-direction:column;gap:0;">
+      <div style="display:flex;align-items:center;gap:20px;padding:14px 0;border-bottom:1px solid #0d1e38;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--blue);width:60px;">0ms</div>
+        <div style="width:3px;height:3px;border-radius:50%;background:var(--blue);flex-shrink:0;"></div>
+        <div style="font-size:13px;color:white;">Nav bar / Logo</div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-left:auto;">fadeIn · 400ms</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:20px;padding:14px 0;border-bottom:1px solid #0d1e38;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--blue);width:60px;">100ms</div>
+        <div style="width:3px;height:3px;border-radius:50%;background:var(--blue);flex-shrink:0;"></div>
+        <div style="font-size:13px;color:white;">Hero eyebrow label</div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-left:auto;">fadeUp · 700ms · ease-out</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:20px;padding:14px 0;border-bottom:1px solid #0d1e38;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--blue);width:60px;">200ms</div>
+        <div style="width:3px;height:3px;border-radius:50%;background:var(--blue);flex-shrink:0;"></div>
+        <div style="font-size:13px;color:white;">Hero H1 headline</div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-left:auto;">fadeUp · 700ms · ease-out</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:20px;padding:14px 0;border-bottom:1px solid #0d1e38;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--blue);width:60px;">350ms</div>
+        <div style="width:3px;height:3px;border-radius:50%;background:var(--blue);flex-shrink:0;"></div>
+        <div style="font-size:13px;color:white;">Hero body + buttons</div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-left:auto;">fadeUp · 700ms · ease-out</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:20px;padding:14px 0;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--blue);width:60px;">500ms</div>
+        <div style="width:3px;height:3px;border-radius:50%;background:var(--blue);flex-shrink:0;"></div>
+        <div style="font-size:13px;color:white;">Hero right panel / stats card</div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-left:auto;">fadeIn · 700ms · ease-out</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="code mt-sm">
+<span class="c">/* Motion tokens */</span>
+<span class="s">:root</span> {
+  <span class="p">--ease-out</span>:  <span class="v">cubic-bezier(0.16, 1, 0.3, 1)</span>;
+  <span class="p">--ease-std</span>:  <span class="v">cubic-bezier(0.4, 0, 0.2, 1)</span>;
+  <span class="p">--dur-fast</span>:  <span class="v">120ms</span>;  <span class="p">--dur-std</span>: <span class="v">220ms</span>;
+  <span class="p">--dur-slow</span>:  <span class="v">400ms</span>;  <span class="p">--dur-xslow</span>: <span class="v">700ms</span>;
+}
+@keyframes <span class="n">fadeUp</span> {
+  <span class="k">from</span> { <span class="p">opacity</span>: <span class="v">0</span>; <span class="p">transform</span>: <span class="v">translateY(20px)</span>; }
+  <span class="k">to</span>   { <span class="p">opacity</span>: <span class="v">1</span>; <span class="p">transform</span>: <span class="v">translateY(0)</span>; }
+}
+<span class="s">.animate-in</span> { <span class="p">animation</span>: <span class="v">fadeUp var(--dur-xslow) var(--ease-out) both</span>; }
+<span class="s">.delay-1</span>    { <span class="p">animation-delay</span>: <span class="v">100ms</span>; }
+<span class="s">.delay-2</span>    { <span class="p">animation-delay</span>: <span class="v">200ms</span>; }
+<span class="s">.delay-3</span>    { <span class="p">animation-delay</span>: <span class="v">350ms</span>; }
+<span class="s">.delay-4</span>    { <span class="p">animation-delay</span>: <span class="v">500ms</span>; }
+  </div>
+</section>
+
+
+<!-- ════════════════ NAV SCROLL BEHAVIOR ════════════════ -->
+<section class="section" style="background:#020810;">
+  <div class="section-eyebrow">// nav_scroll_behavior</div>
+  <h2 class="section-title" style="font-size:48px;">NAV SCROLL STATES</h2>
+  <p class="section-intro" style="margin-bottom:40px;">The nav has three distinct states. All three must be built — a nav that doesn't respond to scroll feels unfinished.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:4px;">
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:9px;color:var(--blue);letter-spacing:0.25em;margin-bottom:16px;">STATE 1 — AT TOP (scrollY = 0)</div>
+      <div style="background:var(--ink);height:52px;display:flex;align-items:center;padding:0 20px;justify-content:space-between;border:1px solid #0d1e38;">
+        <div style="width:120px;height:10px;background:#163366;border-radius:1px;"></div>
+        <div style="display:flex;gap:10px;"><div style="width:40px;height:8px;background:#163366;border-radius:1px;"></div><div style="width:52px;height:26px;background:rgba(11,126,255,0.3);border-radius:1px;"></div></div>
+      </div>
+      <div style="margin-top:14px;font-size:12px;color:var(--gray-400);line-height:1.8;">
+        → Background: <strong style="color:white;">transparent</strong><br>
+        → No border-bottom<br>
+        → Height: <strong style="color:white;">68px</strong><br>
+        → Hero bleeds through
+      </div>
+    </div>
+    <div class="card" style="background:rgba(245,158,11,0.04);border-color:rgba(245,158,11,0.15);">
+      <div style="font-family:var(--font-mono);font-size:9px;color:#f59e0b;letter-spacing:0.25em;margin-bottom:16px;">STATE 2 — SCROLLED (&gt;80px)</div>
+      <div style="background:rgba(4,12,27,0.92);height:44px;display:flex;align-items:center;padding:0 20px;justify-content:space-between;border:1px solid #163366;backdrop-filter:blur(12px);">
+        <div style="width:120px;height:10px;background:#1F4899;border-radius:1px;"></div>
+        <div style="display:flex;gap:10px;"><div style="width:40px;height:8px;background:#1F4899;border-radius:1px;"></div><div style="width:52px;height:24px;background:rgba(11,126,255,0.5);border-radius:1px;"></div></div>
+      </div>
+      <div style="margin-top:14px;font-size:12px;color:var(--gray-400);line-height:1.8;">
+        → Background: <strong style="color:white;">rgba(4,12,27,0.92)</strong><br>
+        → backdrop-filter: <strong style="color:white;">blur(12px)</strong><br>
+        → border-bottom: <strong style="color:white;">1px solid --navy</strong><br>
+        → Height shrinks to: <strong style="color:white;">56px</strong>
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-family:var(--font-mono);font-size:9px;color:var(--blue);letter-spacing:0.25em;margin-bottom:16px;">STATE 3 — SCROLL DOWN → HIDE</div>
+      <div style="background:rgba(4,12,27,0.92);height:44px;display:flex;align-items:center;padding:0 20px;justify-content:space-between;border:1px solid #163366;opacity:0.25;transform:translateY(-8px);">
+        <div style="width:120px;height:10px;background:#1F4899;border-radius:1px;"></div>
+        <div style="width:52px;height:24px;background:rgba(11,126,255,0.5);border-radius:1px;"></div>
+      </div>
+      <div style="margin-top:14px;font-size:12px;color:var(--gray-400);line-height:1.8;">
+        → Scrolling DOWN: <strong style="color:white;">translateY(-100%)</strong><br>
+        → Scrolling UP: <strong style="color:white;">translateY(0)</strong><br>
+        → Transition: <strong style="color:white;">300ms ease-out</strong><br>
+        → Frees mobile screen space
+      </div>
+    </div>
+  </div>
+
+  <div class="code mt-sm">
+<span class="c">/* Nav scroll behavior */</span>
+<span class="s">.nav</span> {
+  <span class="p">position</span>: <span class="v">fixed</span>; <span class="p">top</span>: <span class="v">0</span>; <span class="p">left</span>: <span class="v">0</span>; <span class="p">right</span>: <span class="v">0</span>;
+  <span class="p">height</span>: <span class="v">68px</span>; <span class="p">z-index</span>: <span class="v">var(--z-nav)</span>;
+  <span class="p">background</span>: <span class="v">transparent</span>;
+  <span class="p">transition</span>: <span class="v">all 300ms var(--ease-out)</span>;
+}
+<span class="s">.nav.scrolled</span> {
+  <span class="p">height</span>: <span class="v">56px</span>;
+  <span class="p">background</span>: <span class="v">rgba(4,12,27,0.92)</span>;
+  <span class="p">backdrop-filter</span>: <span class="v">blur(12px)</span>;
+  <span class="p">border-bottom</span>: <span class="v">1px solid var(--navy)</span>;
+}
+<span class="s">.nav.hidden</span> { <span class="p">transform</span>: <span class="v">translateY(-100%)</span>; }
+
+<span class="c">// Scroll direction detection</span>
+<span class="k">let</span> lastScroll = <span class="v">0</span>;
+window.addEventListener(<span class="v">'scroll'</span>, () => {
+  <span class="k">const</span> y = window.scrollY;
+  nav.classList.toggle(<span class="v">'scrolled'</span>, y > <span class="v">80</span>);
+  nav.classList.toggle(<span class="v">'hidden'</span>, y > lastScroll && y > <span class="v">200</span>);
+  lastScroll = y;
+}, { passive: <span class="v">true</span> });
+  </div>
+</section>
+
+
+<!-- ════════════════ 06 FORM STATES ════════════════ -->
+<section class="section" id="s06">
+  <div class="section-num">06 / 13</div>
+  <div class="section-eyebrow">// form_states</div>
+  <h2 class="section-title">FORM STATES</h2>
+  <p class="section-intro">Every input has six states. Validation messages are inline, below the field. Never use alerts or modals for form errors.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-bottom:4px;">
+    <!-- Default -->
+    <div class="card">
+      <div class="state-label">DEFAULT</div>
+      <div style="display:flex;flex-direction:column;gap:7px;">
+        <label class="form-label-txt">Email Address</label>
+        <input class="input-demo" type="email" placeholder="you@business.com">
+        <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">border: --navy</span>
+      </div>
+    </div>
+    <!-- Focus -->
+    <div class="card" style="background:rgba(168,85,247,0.05);border-color:rgba(168,85,247,0.2);">
+      <div class="state-label focus">FOCUS</div>
+      <div style="display:flex;flex-direction:column;gap:7px;">
+        <label class="form-label-txt">Email Address</label>
+        <input class="input-demo" type="email" value="derek@" style="border-color:var(--blue);">
+        <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">border: --blue</span>
+      </div>
+    </div>
+    <!-- Filled/Valid -->
+    <div class="card" style="background:rgba(16,163,74,0.05);border-color:rgba(16,163,74,0.2);">
+      <div class="state-label active">VALID</div>
+      <div style="display:flex;flex-direction:column;gap:7px;">
+        <label class="form-label-txt">Email Address</label>
+        <input class="input-demo input-success" type="email" value="derek@dpp.com">
+        <span class="form-hint hint-success">✓ Looks good</span>
+      </div>
+    </div>
+    <!-- Error -->
+    <div class="card" style="background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.2);">
+      <div class="state-label error">ERROR</div>
+      <div style="display:flex;flex-direction:column;gap:7px;">
+        <label class="form-label-txt">Email Address</label>
+        <input class="input-demo input-error" type="email" value="not-an-email">
+        <span class="form-hint hint-error">✕ Enter a valid email address</span>
+      </div>
+    </div>
+    <!-- Disabled -->
+    <div class="card">
+      <div class="state-label disabled">DISABLED</div>
+      <div style="display:flex;flex-direction:column;gap:7px;">
+        <label class="form-label-txt" style="color:var(--gray-700);">Email Address</label>
+        <input class="input-demo" type="email" value="locked@example.com" disabled>
+        <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-700);">cursor: not-allowed</span>
+      </div>
+    </div>
+    <!-- Success toast -->
+    <div class="card" style="background:rgba(16,163,74,0.05);border-color:rgba(16,163,74,0.2);">
+      <div class="state-label active">FORM SUBMITTED</div>
+      <div style="background:var(--success-bg);border:1px solid rgba(22,163,74,0.3);border-left:3px solid var(--success);padding:18px 16px;margin-top:10px;">
+        <div style="font-family:var(--font-display);font-size:16px;font-weight:800;color:white;letter-spacing:0.03em;margin-bottom:5px;">Message Sent!</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.6);">We'll be in touch within 24 hours.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="code mt-sm">
+<span class="c">/* Form input states */</span>
+<span class="s">input</span>          { <span class="p">border</span>: <span class="v">1px solid var(--navy)</span>; <span class="p">background</span>: <span class="v">var(--ink)</span>; }
+<span class="s">input:focus</span>    { <span class="p">border-color</span>: <span class="v">var(--blue)</span>; <span class="p">outline</span>: <span class="v">none</span>; }
+<span class="s">input:disabled</span> { <span class="p">background</span>: <span class="v">#0a1320</span>; <span class="p">cursor</span>: <span class="v">not-allowed</span>; <span class="p">opacity</span>: <span class="v">0.5</span>; }
+<span class="s">input.error</span>    { <span class="p">border-color</span>: <span class="v">var(--error)</span>; }
+<span class="s">input.success</span>  { <span class="p">border-color</span>: <span class="v">var(--success)</span>; }
+<span class="s">.field-error</span>   { <span class="p">color</span>: <span class="v">var(--error)</span>; <span class="p">font-size</span>: <span class="v">12px</span>; <span class="p">margin-top</span>: <span class="v">6px</span>; }
+  </div>
+</section>
+
+
+<!-- ════════════════ 07 LOADING ════════════════ -->
+<section class="section" id="s07">
+  <div class="section-num">07 / 13</div>
+  <div class="section-eyebrow">// loading_states</div>
+  <h2 class="section-title">LOADING STATES</h2>
+  <p class="section-intro">Never show a blank page. Never freeze the UI. Use skeletons for content-heavy loads, spinners for quick actions, progress bars for multi-step processes.</p>
+
+  <div class="loading-grid">
+    <!-- Skeleton card -->
+    <div class="loading-card">
+      <div class="state-label">SKELETON LOADER — Card</div>
+      <div style="background:var(--ink);border:1px solid #0d1e38;padding:28px;border-top:3px solid #0d1e38;margin-top:16px;">
+        <div class="skeleton" style="height:10px;width:40%;margin-bottom:18px;"></div>
+        <div class="skeleton" style="height:24px;width:75%;margin-bottom:12px;"></div>
+        <div class="skeleton" style="height:13px;width:90%;margin-bottom:8px;"></div>
+        <div class="skeleton" style="height:13px;width:80%;margin-bottom:8px;"></div>
+        <div class="skeleton" style="height:13px;width:65%;margin-bottom:20px;"></div>
+        <div class="skeleton" style="height:38px;width:40%;"></div>
+      </div>
+    </div>
+
+    <!-- Skeleton text -->
+    <div class="loading-card">
+      <div class="state-label">SKELETON LOADER — Text</div>
+      <div style="margin-top:16px;">
+        <div class="skeleton" style="height:48px;width:55%;margin-bottom:20px;"></div>
+        <div class="skeleton" style="height:14px;width:100%;margin-bottom:10px;"></div>
+        <div class="skeleton" style="height:14px;width:95%;margin-bottom:10px;"></div>
+        <div class="skeleton" style="height:14px;width:88%;margin-bottom:10px;"></div>
+        <div class="skeleton" style="height:14px;width:60%;"></div>
+      </div>
+    </div>
+
+    <!-- Spinners -->
+    <div class="loading-card">
+      <div class="state-label">SPINNERS</div>
+      <div style="display:flex;gap:28px;align-items:center;margin-top:24px;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div class="spinner"></div>
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--gray-600);margin-top:10px;letter-spacing:0.15em;">32px</div>
+        </div>
+        <div style="text-align:center;">
+          <div class="spinner spinner-sm"></div>
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--gray-600);margin-top:10px;letter-spacing:0.15em;">20px</div>
+        </div>
+        <div style="text-align:center;">
+          <button class="btn-demo-primary" style="display:flex;align-items:center;gap:10px;font-size:12px;padding:12px 20px;"><span class="spinner spinner-sm"></span> Sending</button>
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--gray-600);margin-top:10px;letter-spacing:0.15em;">In-button</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress bars -->
+    <div class="loading-card">
+      <div class="state-label">PROGRESS BARS</div>
+      <div style="margin-top:20px;display:flex;flex-direction:column;gap:20px;">
+        <div>
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-bottom:8px;letter-spacing:0.1em;">DETERMINATE · 68%</div>
+          <div class="progress-track"><div class="progress-bar" style="width:68%;"></div></div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-bottom:8px;letter-spacing:0.1em;">INDETERMINATE</div>
+          <div class="progress-track"><div class="progress-indeterminate"></div></div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-bottom:8px;letter-spacing:0.1em;">STEP PROGRESS · 2 of 4</div>
+          <div style="display:flex;gap:4px;">
+            <div style="height:3px;flex:1;background:var(--blue);"></div>
+            <div style="height:3px;flex:1;background:var(--blue);"></div>
+            <div style="height:3px;flex:1;background:#0d1e38;"></div>
+            <div style="height:3px;flex:1;background:#0d1e38;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty states -->
+  <div class="block-label mt-lg">Empty States</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+    <div class="card" style="text-align:center;padding:60px;">
+      <svg viewBox="0 0 82 84" width="56" style="opacity:0.15;margin:0 auto 24px;" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="36" x2="46" y2="36" stroke="white" stroke-width="8" stroke-linecap="square"/>
+        <line x1="46" y1="36" x2="46" y2="74" stroke="white" stroke-width="8" stroke-linecap="square"/>
+        <circle cx="10" cy="36" r="7" fill="white"/><circle cx="46" cy="74" r="7" fill="white"/>
+        <circle cx="46" cy="36" r="13" fill="#0B7EFF"/><circle cx="46" cy="36" r="5" fill="white"/>
+      </svg>
+      <div style="font-family:var(--font-display);font-size:22px;font-weight:800;color:white;letter-spacing:0.03em;margin-bottom:10px;">No Results Found</div>
+      <div style="font-size:14px;color:var(--gray-400);line-height:1.6;max-width:280px;margin:0 auto 24px;">Try adjusting your search or clearing filters.</div>
+      <button class="btn-demo-primary" style="font-size:11px;padding:10px 22px;">Clear Filters</button>
+    </div>
+    <div class="card" style="text-align:center;padding:60px;">
+      <div style="width:56px;height:56px;background:rgba(11,126,255,0.1);border:1px solid rgba(11,126,255,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+        <svg viewBox="0 0 24 24" width="24" fill="none" stroke="#0B7EFF" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+      <div style="font-family:var(--font-display);font-size:22px;font-weight:800;color:white;letter-spacing:0.03em;margin-bottom:10px;">Get Started</div>
+      <div style="font-size:14px;color:var(--gray-400);line-height:1.6;max-width:280px;margin:0 auto 24px;">You haven't added anything yet. Begin by filling out the form above.</div>
+      <button class="btn-demo-primary" style="font-size:11px;padding:10px 22px;">Add First Item</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ 08 ACCESSIBILITY ════════════════ -->
+<section class="section" id="s08">
+  <div class="section-num">08 / 13</div>
+  <div class="section-eyebrow">// accessibility</div>
+  <h2 class="section-title">ACCESSIBILITY</h2>
+  <p class="section-intro">WCAG 2.1 AA minimum. Contrast ratios, focus rings, tap targets, and semantic HTML. Not a checkbox — it's how good sites are built.</p>
+
+  <!-- Contrast ratios -->
+  <div class="block-label">Contrast Ratios</div>
+  <div class="a11y-grid">
+    <div class="a11y-card">
+      <div style="font-family:var(--font-display);font-size:18px;font-weight:800;color:white;letter-spacing:0.03em;margin-bottom:20px;">Text on Backgrounds</div>
+      <div class="contrast-row">
+        <div class="contrast-swatch" style="background:#040c1b;color:white;">Aa</div>
+        <div class="contrast-info">White on Ink</div>
+        <div class="contrast-ratio" style="color:#22c55e;">16.9:1</div>
+        <span class="badge-pass">AAA</span>
+      </div>
+      <div class="contrast-row">
+        <div class="contrast-swatch" style="background:#0B1C38;color:white;">Aa</div>
+        <div class="contrast-info">White on Navy Deep</div>
+        <div class="contrast-ratio" style="color:#22c55e;">11.2:1</div>
+        <span class="badge-pass">AAA</span>
+      </div>
+      <div class="contrast-row">
+        <div class="contrast-swatch" style="background:#040c1b;color:#8A9BB5;">Aa</div>
+        <div class="contrast-info">Gray-400 on Ink</div>
+        <div class="contrast-ratio" style="color:#22c55e;">6.8:1</div>
+        <span class="badge-pass">AA</span>
+      </div>
+      <div class="contrast-row">
+        <div class="contrast-swatch" style="background:#040c1b;color:#0B7EFF;">Aa</div>
+        <div class="contrast-info">Blue on Ink</div>
+        <div class="contrast-ratio" style="color:#22c55e;">4.6:1</div>
+        <span class="badge-pass">AA</span>
+      </div>
+      <div class="contrast-row">
+        <div class="contrast-swatch" style="background:#163366;color:#0B7EFF;">Aa</div>
+        <div class="contrast-info">Blue on Navy</div>
+        <div class="contrast-ratio" style="color:#ef4444;">2.1:1</div>
+        <span class="badge-fail">FAIL</span>
+      </div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:10px;font-family:var(--font-mono);">⚠ Never use Electric Blue as body text on Navy backgrounds</div>
+    </div>
+
+    <div class="a11y-card">
+      <div style="font-family:var(--font-display);font-size:18px;font-weight:800;color:white;letter-spacing:0.03em;margin-bottom:20px;">Requirements</div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="padding:14px 0;border-bottom:1px solid #0d1e38;">
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:6px;letter-spacing:0.15em;">FOCUS RINGS</div>
+          <div style="font-size:13px;color:var(--gray-400);line-height:1.55;">All interactive elements must have visible focus rings. Use <code style="font-family:var(--font-mono);color:var(--blue-soft);">:focus-visible</code> not <code style="font-family:var(--font-mono);color:var(--blue-soft);">:focus</code>. Style: 2px solid #0B7EFF, 3px offset.</div>
+        </div>
+        <div style="padding:14px 0;border-bottom:1px solid #0d1e38;">
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:6px;letter-spacing:0.15em;">TAP TARGETS</div>
+          <div style="font-size:13px;color:var(--gray-400);line-height:1.55;">Minimum 44 × 44px for all interactive elements on mobile. Add padding rather than stretching the element visually.</div>
+        </div>
+        <div style="padding:14px 0;border-bottom:1px solid #0d1e38;">
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:6px;letter-spacing:0.15em;">ARIA LABELS</div>
+          <div style="font-size:13px;color:var(--gray-400);line-height:1.55;">Icon-only buttons need <code style="font-family:var(--font-mono);color:var(--blue-soft);">aria-label</code>. The hamburger menu needs <code style="font-family:var(--font-mono);color:var(--blue-soft);">aria-expanded</code> state updates. Logo link needs <code style="font-family:var(--font-mono);color:var(--blue-soft);">aria-label="Home"</code>.</div>
+        </div>
+        <div style="padding:14px 0;border-bottom:1px solid #0d1e38;">
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:6px;letter-spacing:0.15em;">SEMANTIC HTML</div>
+          <div style="font-size:13px;color:var(--gray-400);line-height:1.55;">Use <code style="font-family:var(--font-mono);color:var(--blue-soft);">&lt;nav&gt;</code>, <code style="font-family:var(--font-mono);color:var(--blue-soft);">&lt;main&gt;</code>, <code style="font-family:var(--font-mono);color:var(--blue-soft);">&lt;section&gt;</code>, <code style="font-family:var(--font-mono);color:var(--blue-soft);">&lt;footer&gt;</code>. One H1 per page. Logical heading hierarchy.</div>
+        </div>
+        <div style="padding:14px 0;">
+          <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:6px;letter-spacing:0.15em;">MOTION</div>
+          <div style="font-size:13px;color:var(--gray-400);line-height:1.55;">Respect <code style="font-family:var(--font-mono);color:var(--blue-soft);">prefers-reduced-motion</code>. Wrap all animations in a media query check.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="code mt-sm">
+<span class="c">/* Accessibility essentials */</span>
+<span class="s">*:focus-visible</span> { <span class="p">outline</span>: <span class="v">2px solid var(--blue)</span>; <span class="p">outline-offset</span>: <span class="v">3px</span>; }
+<span class="s">*:focus:not(:focus-visible)</span> { <span class="p">outline</span>: <span class="v">none</span>; }
+
+@media (<span class="p">prefers-reduced-motion</span>: <span class="v">reduce</span>) {
+  <span class="s">*, *::before, *::after</span> {
+    <span class="p">animation-duration</span>:   <span class="v">0.01ms !important</span>;
+    <span class="p">transition-duration</span>:  <span class="v">0.01ms !important</span>;
+  }
+}
+
+<span class="c">/* Skip to content link */</span>
+<span class="s">.skip-link</span> {
+  <span class="p">position</span>: <span class="v">absolute</span>; <span class="p">top</span>: <span class="v">-40px</span>; <span class="p">left</span>: <span class="v">0</span>;
+  <span class="p">background</span>: <span class="v">var(--blue)</span>; <span class="p">color</span>: <span class="v">white</span>; <span class="p">padding</span>: <span class="v">8px 16px</span>; <span class="p">z-index</span>: <span class="v">999</span>;
+}
+<span class="s">.skip-link:focus</span> { <span class="p">top</span>: <span class="v">0</span>; }
+  </div>
+</section>
+
+
+<!-- ════════════════ 09 MOBILE ════════════════ -->
+<section class="section" id="s09">
+  <div class="section-num">09 / 13</div>
+  <div class="section-eyebrow">// mobile_patterns</div>
+  <h2 class="section-title">MOBILE PATTERNS</h2>
+  <p class="section-intro">Mobile-first build. The nav collapses to a full-screen drawer. Hero stacks vertically. Cards go single-column. Buttons go full-width. All type scales down proportionally.</p>
+
+  <div class="mobile-grid">
+
+    <!-- Default nav + hero -->
+    <div class="mobile-frame">
+      <div class="mobile-screen-lbl">Default — Scrolled Up</div>
+      <div class="mobile-screen">
+        <div class="m-nav">
+          <svg viewBox="0 0 52 54" width="28" xmlns="http://www.w3.org/2000/svg">
+            <line x1="6" y1="22" x2="28" y2="22" stroke="white" stroke-width="6" stroke-linecap="square"/>
+            <line x1="28" y1="22" x2="28" y2="48" stroke="white" stroke-width="6" stroke-linecap="square"/>
+            <circle cx="6" cy="22" r="5" fill="white"/><circle cx="28" cy="48" r="5" fill="white"/>
+            <circle cx="28" cy="22" r="10" fill="#0B7EFF"/><circle cx="28" cy="22" r="4" fill="white"/>
+          </svg>
+          <div class="m-hamburger" aria-label="Menu">
+            <span></span><span></span><span style="width:14px;"></span>
+          </div>
+        </div>
+        <div class="m-hero">
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--blue);letter-spacing:0.25em;margin-bottom:10px;">// AI AGENCY</div>
+          <h1 class="m-hero" style="font-family:var(--font-display);font-size:44px;font-weight:900;color:white;letter-spacing:0.02em;line-height:0.92;margin-bottom:14px;">WE BUILD<br>THE <span style="color:#0B7EFF;">DIGITAL</span><br>ENGINE.</h1>
+          <p style="font-size:13px;color:var(--gray-400);line-height:1.6;margin-bottom:20px;">AI-powered websites, SEO, and automation for agents and contractors.</p>
+          <button class="m-btn">See What's Possible</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Open drawer -->
+    <div class="mobile-frame">
+      <div class="mobile-screen-lbl">Nav Drawer — Open</div>
+      <div class="mobile-screen">
+        <div class="m-nav">
+          <svg viewBox="0 0 52 54" width="28" xmlns="http://www.w3.org/2000/svg">
+            <line x1="6" y1="22" x2="28" y2="22" stroke="white" stroke-width="6" stroke-linecap="square"/>
+            <line x1="28" y1="22" x2="28" y2="48" stroke="white" stroke-width="6" stroke-linecap="square"/>
+            <circle cx="6" cy="22" r="5" fill="white"/><circle cx="28" cy="48" r="5" fill="white"/>
+            <circle cx="28" cy="22" r="10" fill="#0B7EFF"/><circle cx="28" cy="22" r="4" fill="white"/>
+          </svg>
+          <div style="font-family:var(--font-display);font-size:18px;font-weight:900;color:var(--blue);letter-spacing:0.1em;cursor:pointer;">✕</div>
+        </div>
+        <div class="m-drawer">
+          <div class="m-drawer-link">Services <span style="color:var(--navy);">→</span></div>
+          <div class="m-drawer-link">About <span style="color:var(--navy);">→</span></div>
+          <div class="m-drawer-link">Results <span style="color:var(--navy);">→</span></div>
+          <div class="m-drawer-link">Contact <span style="color:var(--navy);">→</span></div>
+          <div class="m-drawer-cta">Get Started Free</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services + bottom bar -->
+    <div class="mobile-frame">
+      <div class="mobile-screen-lbl">Services Section</div>
+      <div class="mobile-screen">
+        <div style="padding:32px 16px 16px;background:var(--ink);">
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--blue);margin-bottom:8px;letter-spacing:0.2em;">// SERVICES</div>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:white;letter-spacing:0.02em;line-height:0.92;margin-bottom:24px;">THREE<br>SYSTEMS.</div>
+          <div class="m-card">
+            <div class="m-card-title">Web Design</div>
+            <div class="m-card-text">Custom sites that rank locally and convert visitors to leads.</div>
+          </div>
+          <div class="m-card">
+            <div class="m-card-title">Google SEO</div>
+            <div class="m-card-text">Rank #1 when buyers search in your area.</div>
+          </div>
+          <div class="m-card" style="border-top-color:var(--blue);">
+            <div class="m-card-title" style="color:var(--blue-soft);">AI Automation</div>
+            <div class="m-card-text">Automated follow-up that runs while you work.</div>
+          </div>
+        </div>
+        <div class="m-bottom-bar">
+          <div class="m-tab m-tab-active">
+            <svg viewBox="0 0 20 20" width="18" fill="none" stroke="#0B7EFF" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="6" height="6" rx="1"/><rect x="12" y="2" width="6" height="6" rx="1"/><rect x="2" y="12" width="6" height="6" rx="1"/><rect x="12" y="12" width="6" height="6" rx="1"/></svg>
+            Home
+          </div>
+          <div class="m-tab">
+            <svg viewBox="0 0 20 20" width="18" fill="none" stroke="#3a5070" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="7"/><path d="M7 10h3l2-4"/></svg>
+            Services
+          </div>
+          <div class="m-tab">
+            <svg viewBox="0 0 20 20" width="18" fill="none" stroke="#3a5070" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="7" r="3"/><path d="M4 17s1-4 6-4 6 4 6 4"/></svg>
+            About
+          </div>
+          <div class="m-tab">
+            <svg viewBox="0 0 20 20" width="18" fill="none" stroke="#3a5070" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 8l8 5 8-5"/></svg>
+            Contact
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Mobile scale reductions -->
+  <div class="card mt-md">
+    <div style="font-family:var(--font-display);font-size:18px;font-weight:800;color:white;letter-spacing:0.04em;margin-bottom:20px;">MOBILE TYPE SCALE REDUCTIONS</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;font-family:var(--font-mono);font-size:11px;color:var(--gray-400);">
+      <div><div style="color:var(--blue);margin-bottom:8px;">H1 Hero</div><div>Desktop: 72–96px</div><div>Mobile: 44–56px</div></div>
+      <div><div style="color:var(--blue);margin-bottom:8px;">H2 Section</div><div>Desktop: 52–60px</div><div>Mobile: 36–44px</div></div>
+      <div><div style="color:var(--blue);margin-bottom:8px;">Section pad</div><div>Desktop: 100px</div><div>Mobile: 40px</div></div>
+      <div><div style="color:var(--blue);margin-bottom:8px;">Nav height</div><div>Desktop: 68–72px</div><div>Mobile: 52px</div></div>
+      <div><div style="color:var(--blue);margin-bottom:8px;">Buttons</div><div>Desktop: auto-width</div><div>Mobile: 100% width</div></div>
+      <div><div style="color:var(--blue);margin-bottom:8px;">Grid</div><div>Desktop: 3-col</div><div>Mobile: 1-col</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ 10 PAGE TEMPLATES ════════════════ -->
+<section class="section" id="s10">
+  <div class="section-num">10 / 13</div>
+  <div class="section-eyebrow">// page_templates</div>
+  <h2 class="section-title">PAGE TEMPLATES</h2>
+  <p class="section-intro">Five page blueprints for the website. Each shows section order, content type, and approximate height. Build these in order — Home first, then Services, then About, Contact, and Thank You.</p>
+
+  <!-- Home -->
+  <div class="template-block">
+    <div class="template-header">
+      <span class="template-header-label">// page-01 · Home</span>
+      <span class="template-header-meta">Primary landing page · Max conversion</span>
+    </div>
+    <div style="padding:24px;">
+      <div class="wf-nav" style="margin-bottom:4px;">
+        <div style="display:flex;gap:12px;align-items:center;">
+          <div class="wf-block" style="width:28px;height:28px;"></div>
+          <div class="wf-block" style="width:180px;height:14px;"></div>
+        </div>
+        <div style="display:flex;gap:16px;">
+          <div class="wf-block" style="width:60px;height:10px;"></div>
+          <div class="wf-block" style="width:60px;height:10px;"></div>
+          <div class="wf-block" style="width:60px;height:10px;"></div>
+          <div class="wf-block" style="width:90px;height:32px;"></div>
+        </div>
+      </div>
+      <!-- Hero -->
+      <div class="wf-hero" style="height:440px;grid-template-columns:1.4fr 1fr;">
+        <div>
+          <div class="wf-block" style="width:60%;height:10px;margin-bottom:16px;"></div>
+          <div class="wf-block" style="width:80%;height:40px;margin-bottom:10px;"></div>
+          <div class="wf-block" style="width:70%;height:40px;margin-bottom:10px;"></div>
+          <div class="wf-block" style="width:50%;height:40px;margin-bottom:20px;"></div>
+          <div class="wf-block" style="width:85%;height:14px;margin-bottom:8px;"></div>
+          <div class="wf-block" style="width:70%;height:14px;margin-bottom:28px;"></div>
+          <div style="display:flex;gap:12px;">
+            <div class="wf-block" style="width:140px;height:48px;background:rgba(11,126,255,0.3);"></div>
+            <div class="wf-block" style="width:120px;height:48px;"></div>
+          </div>
+        </div>
+        <div style="background:#0a1a30;border:1px solid #0d1e38;border-left:none;display:flex;align-items:center;justify-content:center;">
+          <div style="width:80%;background:#030e1e;border:1px solid #0d1e38;padding:24px;">
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:12px;">// results card</div>
+            <div class="wf-block" style="height:12px;width:60%;margin-bottom:10px;"></div>
+            <div class="wf-block" style="height:12px;width:80%;margin-bottom:10px;"></div>
+            <div class="wf-block" style="height:12px;width:50%;"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Stat bar -->
+      <div style="background:#030e1e;border-top:1px solid #0d1e38;padding:28px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+        <div><div class="wf-block" style="width:60px;height:36px;background:rgba(11,126,255,0.2);margin-bottom:8px;"></div><div class="wf-block" style="width:90%;height:10px;"></div></div>
+        <div><div class="wf-block" style="width:60px;height:36px;background:rgba(11,126,255,0.2);margin-bottom:8px;"></div><div class="wf-block" style="width:90%;height:10px;"></div></div>
+        <div><div class="wf-block" style="width:60px;height:36px;background:rgba(11,126,255,0.2);margin-bottom:8px;"></div><div class="wf-block" style="width:90%;height:10px;"></div></div>
+        <div><div class="wf-block" style="width:60px;height:36px;background:rgba(11,126,255,0.2);margin-bottom:8px;"></div><div class="wf-block" style="width:90%;height:10px;"></div></div>
+      </div>
+      <!-- Services -->
+      <div class="wf-section">
+        <div><div class="wf-block" style="width:120px;height:10px;margin-bottom:12px;background:rgba(11,126,255,0.3);"></div><div class="wf-block" style="width:40%;height:32px;"></div></div>
+        <div class="wf-grid-3">
+          <div class="wf-card-wf" style="height:160px;"></div>
+          <div class="wf-card-wf" style="height:160px;border-top-color:#0B7EFF;"></div>
+          <div class="wf-card-wf" style="height:160px;"></div>
+        </div>
+      </div>
+      <!-- Testimonial -->
+      <div class="wf-section alt">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div class="wf-block" style="height:120px;"></div>
+          <div class="wf-block" style="height:120px;"></div>
+        </div>
+      </div>
+      <!-- CTA strip -->
+      <div style="background:rgba(11,126,255,0.08);border:1px solid rgba(11,126,255,0.2);padding:40px;display:flex;justify-content:space-between;align-items:center;">
+        <div><div class="wf-block" style="width:300px;height:28px;margin-bottom:10px;"></div><div class="wf-block" style="width:240px;height:14px;"></div></div>
+        <div class="wf-block" style="width:160px;height:48px;background:rgba(11,126,255,0.3);"></div>
+      </div>
+      <!-- Footer -->
+      <div class="wf-footer">
+        <div><div class="wf-block" style="width:40px;height:40px;margin-bottom:12px;"></div><div class="wf-block" style="width:100%;height:10px;margin-bottom:8px;"></div><div class="wf-block" style="width:80%;height:10px;"></div></div>
+        <div><div class="wf-block" style="width:60%;height:10px;margin-bottom:16px;background:rgba(11,126,255,0.3);"></div><div class="wf-block" style="width:80%;height:9px;margin-bottom:8px;"></div><div class="wf-block" style="width:70%;height:9px;margin-bottom:8px;"></div><div class="wf-block" style="width:60%;height:9px;"></div></div>
+        <div><div class="wf-block" style="width:60%;height:10px;margin-bottom:16px;background:rgba(11,126,255,0.3);"></div><div class="wf-block" style="width:80%;height:9px;margin-bottom:8px;"></div><div class="wf-block" style="width:60%;height:9px;"></div></div>
+        <div><div class="wf-block" style="width:60%;height:10px;margin-bottom:16px;background:rgba(11,126,255,0.3);"></div><div class="wf-block" style="width:100%;height:9px;margin-bottom:8px;"></div><div class="wf-block" style="width:80%;height:9px;"></div></div>
+      </div>
+    </div>
+    <div style="padding:14px 24px;border-top:1px solid #0d1e38;display:flex;gap:24px;font-family:var(--font-mono);font-size:9px;color:var(--gray-600);letter-spacing:0.15em;">
+      <span>SECTIONS: Nav · Hero · Stats · Services · Testimonials · CTA Strip · Footer</span>
+      <span style="margin-left:auto;">PRIMARY GOAL: Lead capture</span>
+    </div>
+  </div>
+
+  <!-- Pages summary -->
+  <div class="card mt-md">
+    <div style="font-family:var(--font-display);font-size:18px;font-weight:800;color:white;letter-spacing:0.04em;margin-bottom:20px;">ALL PAGES — SECTION ORDER</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;font-size:13px;color:var(--gray-400);">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:10px;letter-spacing:0.15em;">/services</div>
+        <div style="line-height:2;padding-left:12px;border-left:2px solid #0d1e38;">Nav → Services Hero → Service Detail 1 (Web) → Service Detail 2 (SEO) → Service Detail 3 (AI) → Process Steps → CTA → Footer</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:10px;letter-spacing:0.15em;">/about</div>
+        <div style="line-height:2;padding-left:12px;border-left:2px solid #0d1e38;">Nav → About Hero (Derek intro) → Why DPP → Sealcoating origin story → Values → CTA → Footer</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:10px;letter-spacing:0.15em;">/contact</div>
+        <div style="line-height:2;padding-left:12px;border-left:2px solid #0d1e38;">Nav → Contact Hero → Form (Name, Email, Business, Phone, Message) → What Happens Next → Footer</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--blue);margin-bottom:10px;letter-spacing:0.15em;">/thank-you</div>
+        <div style="line-height:2;padding-left:12px;border-left:2px solid #0d1e38;">Nav → Confirmation Message → What to Expect → Back to Home CTA → Footer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ 11 SEO & META ════════════════ -->
+<section class="section" id="s11">
+  <div class="section-num">11 / 13</div>
+  <div class="section-eyebrow">// seo_and_meta</div>
+  <h2 class="section-title">SEO &amp; META</h2>
+  <p class="section-intro">We sell Google SEO — the brand's own website must be an example of it. Every page has a unique title tag, meta description, OG image, and schema markup. Set these on day one.</p>
+
+  <!-- Google preview -->
+  <div class="block-label">Google Search Preview — Homepage</div>
+  <div style="background:#020810;border:1px solid #0d1e38;padding:32px;margin-bottom:4px;">
+    <div style="background:#202124;padding:24px 28px;max-width:680px;">
+      <div class="seo-url">https://directpropertypartners.com</div>
+      <div class="seo-title">Direct Property Partners | AI-Powered Websites & SEO for Real Estate Agents</div>
+      <div class="seo-desc">We build custom websites, local Google SEO, and AI automation for real estate agents and contractors in Greater Philadelphia. Get more leads without more staff. Free consultation.</div>
+    </div>
+  </div>
+
+  <!-- Meta table -->
+  <div class="block-label mt-md">Meta Tags — Per Page</div>
+  <div style="background:#020810;border:1px solid #0d1e38;overflow:hidden;">
+    <table class="seo-table" style="width:100%;">
+      <tr><th>Tag</th><th>Homepage</th><th>Spec</th></tr>
+      <tr><td>&lt;title&gt;</td><td>Direct Property Partners | AI-Powered Websites &amp; SEO for Real Estate Agents</td><td>50–60 chars · KW first</td></tr>
+      <tr><td>&lt;meta description&gt;</td><td>Custom websites, local SEO, and AI automation for agents and contractors in Philadelphia. Get more leads without more staff.</td><td>150–160 chars</td></tr>
+      <tr><td>og:title</td><td>Direct Property Partners — AI Agency for Real Estate &amp; Contractors</td><td>Can match title</td></tr>
+      <tr><td>og:description</td><td>Same as meta description</td><td>Match or adapt</td></tr>
+      <tr><td>og:image</td><td>/og-home.jpg (1200×630px)</td><td>See asset checklist</td></tr>
+      <tr><td>og:url</td><td>https://directpropertypartners.com/</td><td>Canonical URL</td></tr>
+      <tr><td>canonical</td><td>https://directpropertypartners.com/</td><td>Always self-ref</td></tr>
+      <tr><td>robots</td><td>index, follow</td><td>All public pages</td></tr>
+      <tr><td>lang</td><td>en-US</td><td>On &lt;html&gt; tag</td></tr>
+    </table>
+  </div>
+
+  <!-- Schema -->
+  <div class="block-label mt-md">Schema.org Markup</div>
+  <div class="code">
+<span class="c">/* LocalBusiness schema — add to &lt;head&gt; as JSON-LD */</span>
+{
+  <span class="p">"@context"</span>: <span class="v">"https://schema.org"</span>,
+  <span class="p">"@type"</span>: <span class="v">"LocalBusiness"</span>,
+  <span class="p">"name"</span>: <span class="v">"Direct Property Partners"</span>,
+  <span class="p">"description"</span>: <span class="v">"AI-powered websites, SEO, and automation for real estate agents and contractors"</span>,
+  <span class="p">"url"</span>: <span class="v">"https://directpropertypartners.com"</span>,
+  <span class="p">"telephone"</span>: <span class="v">"+12150000000"</span>,
+  <span class="p">"areaServed"</span>: <span class="v">"Greater Philadelphia, PA"</span>,
+  <span class="p">"serviceType"</span>: [<span class="v">"Web Design"</span>, <span class="v">"SEO"</span>, <span class="v">"AI Automation"</span>],
+  <span class="p">"sameAs"</span>: [
+    <span class="v">"https://linkedin.com/company/direct-property-partners"</span>
+  ]
+}
+  </div>
+
+  <!-- URL structure -->
+  <div class="block-label mt-md">URL Structure</div>
+  <div class="card">
+    <div style="display:flex;flex-direction:column;gap:0;font-family:var(--font-mono);font-size:12px;">
+      <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--blue);">directpropertypartners.com/</span><span style="color:var(--gray-600);">Homepage</span></div>
+      <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--blue);">directpropertypartners.com/services</span><span style="color:var(--gray-600);">Services overview</span></div>
+      <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--blue);">directpropertypartners.com/services/web-design</span><span style="color:var(--gray-600);">Web design service page</span></div>
+      <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--blue);">directpropertypartners.com/services/seo</span><span style="color:var(--gray-600);">SEO service page</span></div>
+      <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--blue);">directpropertypartners.com/services/ai-automation</span><span style="color:var(--gray-600);">AI automation service page</span></div>
+      <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--blue);">directpropertypartners.com/about</span><span style="color:var(--gray-600);">About Derek + company</span></div>
+      <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--blue);">directpropertypartners.com/contact</span><span style="color:var(--gray-600);">Contact + lead form</span></div>
+      <div style="display:flex;justify-content:space-between;padding:12px 0;"><span style="color:var(--blue);">directpropertypartners.com/thank-you</span><span style="color:var(--gray-600);">Post-form confirmation</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ 12 ASSET CHECKLIST ════════════════ -->
+<section class="section" id="s12">
+  <div class="section-num">12 / 13</div>
+  <div class="section-eyebrow">// asset_checklist</div>
+  <h2 class="section-title">ASSET CHECKLIST</h2>
+  <p class="section-intro">Every file you need before going live. Don't launch without these. Production images should be WebP with JPEG fallback. All SVGs should be optimized with SVGO.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+    <div class="card">
+      <div style="font-family:var(--font-display);font-size:18px;font-weight:800;color:white;letter-spacing:0.04em;margin-bottom:20px;">LOGO FILES</div>
+      <div style="display:flex;flex-direction:column;gap:0;font-size:13px;">
+        <div style="display:grid;grid-template-columns:20px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid #0d1e38;align-items:center;">
+          <div style="width:16px;height:16px;border:1.5px solid var(--success);border-radius:2px;"></div>
+          <span style="color:white;">logo-primary.svg</span>
+          <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">Dark bg</span>
+        </div>
+        <div style="display:grid;grid-template-columns:20px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid #0d1e38;align-items:center;">
+          <div style="width:16px;height:16px;border:1.5px solid var(--success);border-radius:2px;"></div>
+          <span style="color:white;">logo-light.svg</span>
+          <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">Light bg</span>
+        </div>
+        <div style="display:grid;grid-template-columns:20px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid #0d1e38;align-items:center;">
+          <div style="width:16px;height:16px;border:1.5px solid var(--success);border-radius:2px;"></div>
+          <span style="color:white;">logo-mark.svg</span>
+          <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">Icon only</span>
+        </div>
+        <div style="display:grid;grid-template-columns:20px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid #0d1e38;align-items:center;">
+          <div style="width:16px;height:16px;border:1.5px solid var(--success);border-radius:2px;"></div>
+          <span style="color:white;">favicon.ico + favicon.png</span>
+          <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">32px, 512px</span>
+        </div>
+        <div style="display:grid;grid-template-columns:20px 1fr auto;gap:10px;padding:11px 0;align-items:center;">
+          <div style="width:16px;height:16px;border:1.5px solid var(--success);border-radius:2px;"></div>
+          <span style="color:white;">apple-touch-icon.png</span>
+          <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">180×180px</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-family:var(--font-display);font-size:18px;font-weight:800;color:white;letter-spacing:0.04em;margin-bottom:20px;">OG / SOCIAL IMAGES</div>
+      <div style="display:flex;flex-direction:column;gap:0;font-size:13px;">
+        <div style="display:grid;grid-template-columns:20px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid #0d1e38;align-items:center;">
+          <div style="width:16px;height:16px;border:1.5px solid var(--success);border-radius:2px;"></div>
+          <span style="color:white;">og-home.jpg</span>
+          <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">1200×630px</span>
+        </div>
+        <div style="display:grid;grid-template-columns:20px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid #0d1e38;align-items:center;">
+          <div style="width:16px;height:16px;border:1.5px solid var(--success);border-radius:2px;"></div>
+          <span style="color:white;">og-services.jpg</span>
+          <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">1200×630px</span>
+        </div>
+        <div style="display:grid;grid-template-columns:20px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid #0d1e38;align-items:center;">
+          <div style="width:16px;height:16px;border:1.5px solid var(--success);border-radius:2px;"></div>
+          <span style="color:white;">og-contact.jpg</span>
+          <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">1200×630px</span>
+        </div>
+        <div style="display:grid;grid-template-columns:20px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid #0d1e38;align-items:center;">
+          <div style="width:16px;height:16px;border:1.5px solid var(--success);border-radius:2px;"></div>
+          <span style="color:white;">twitter-card.jpg</span>
+          <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">1200×600px</span>
+        </div>
+        <div style="display:grid;grid-template-columns:20px 1fr auto;gap:10px;padding:11px 0;align-items:center;">
+          <div style="width:16px;height:16px;border:1.5px solid var(--success);border-radius:2px;"></div>
+          <span style="color:white;">site.webmanifest</span>
+          <span style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);">PWA icons</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-family:var(--font-display);font-size:18px;font-weight:800;color:white;letter-spacing:0.04em;margin-bottom:20px;">PERFORMANCE TARGETS</div>
+      <div style="display:flex;flex-direction:column;gap:0;font-size:13px;font-family:var(--font-mono);">
+        <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">LCP (Largest Contentful Paint)</span><span style="color:var(--success);">&lt; 2.5s</span></div>
+        <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">FID (First Input Delay)</span><span style="color:var(--success);">&lt; 100ms</span></div>
+        <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">CLS (Cumulative Layout Shift)</span><span style="color:var(--success);">&lt; 0.1</span></div>
+        <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #0d1e38;"><span style="color:var(--gray-400);">Lighthouse Score (target)</span><span style="color:var(--success);">90+</span></div>
+        <div style="display:flex;justify-content:space-between;padding:11px 0;"><span style="color:var(--gray-400);">Max image size (above fold)</span><span style="color:var(--success);">&lt; 200KB WebP</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-family:var(--font-display);font-size:18px;font-weight:800;color:white;letter-spacing:0.04em;margin-bottom:20px;">PRE-LAUNCH CHECKLIST</div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;color:var(--gray-400);">
+        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--blue);flex-shrink:0;font-family:var(--font-mono);">□</span><span>All logo files exported at 1x and 2x resolution</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--blue);flex-shrink:0;font-family:var(--font-mono);">□</span><span>Favicon displays correctly in all browsers</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--blue);flex-shrink:0;font-family:var(--font-mono);">□</span><span>OG images test correctly via og:debugger</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--blue);flex-shrink:0;font-family:var(--font-mono);">□</span><span>Schema markup validates on schema.org/validator</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--blue);flex-shrink:0;font-family:var(--font-mono);">□</span><span>Google Search Console connected + sitemap submitted</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--blue);flex-shrink:0;font-family:var(--font-mono);">□</span><span>Google Analytics (GA4) or similar installed</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--blue);flex-shrink:0;font-family:var(--font-mono);">□</span><span>Form submissions tested and confirmation fires</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--blue);flex-shrink:0;font-family:var(--font-mono);">□</span><span>Lighthouse score 90+ on all pages</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--blue);flex-shrink:0;font-family:var(--font-mono);">□</span><span>Mobile renders correctly on 375px, 390px, 414px viewports</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--blue);flex-shrink:0;font-family:var(--font-mono);">□</span><span>SSL active · HTTPS enforced · 301 redirects from HTTP</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ 13 USAGE RULES ════════════════ -->
+<section class="section" id="s13" style="border-bottom:none;">
+  <div class="section-num">13 / 13</div>
+  <div class="section-eyebrow">// usage_rules</div>
+  <h2 class="section-title">USAGE RULES</h2>
+  <p class="section-intro">The final reference. When in doubt — come back here. These rules protect the brand's integrity across every touchpoint.</p>
+
+  <div class="rules-grid">
+    <div class="rules-card">
+      <span class="rules-tag do">Always Do</span>
+      <ul class="rules-list do">
+        <li>Use Ink (#040c1b) as the dominant background — minimum 60% of any page</li>
+        <li>Reserve Electric Blue for accents only — CTAs, links, stats, the logo node</li>
+        <li>Use Barlow Condensed for ALL headlines at 800 or 900 weight</li>
+        <li>Use :focus-visible for focus rings — 2px solid --blue, 3px offset</li>
+        <li>Honor prefers-reduced-motion with a universal animation disable</li>
+        <li>Use 0–2px border radius on all UI elements — no round bubbles</li>
+        <li>Show skeletons for any content that takes more than 300ms to load</li>
+        <li>Include inline validation on every form field on blur</li>
+        <li>Set a unique title tag and meta description on every page</li>
+        <li>Run Lighthouse before every release — target 90+ performance</li>
+        <li>Use semantic HTML tags: nav, main, section, article, footer, h1-h6</li>
+        <li>Stagger page-load animations using the defined delay system</li>
+        <li>Use 2px stroke line-only icons — Lucide or Phosphor Light</li>
+        <li>Maintain 80–120px section padding on desktop, 40px on mobile</li>
+        <li>Test on iOS Safari and Chrome Android before every release</li>
+      </ul>
+    </div>
+    <div class="rules-card">
+      <span class="rules-tag dont">Never Do</span>
+      <ul class="rules-list dont">
+        <li>Use warm colors (red, orange, yellow, green) as decorative elements</li>
+        <li>Use Electric Blue for body text — it fails contrast on navy backgrounds</li>
+        <li>Add drop shadows, glow effects, or blur on UI components</li>
+        <li>Use gradients beyond subtle navy-to-ink atmospheric backgrounds</li>
+        <li>Remove focus outlines with outline:none without a :focus-visible replacement</li>
+        <li>Animate things that don't communicate state or meaning</li>
+        <li>Leave a form field without all six states designed and implemented</li>
+        <li>Launch without OG images — every page needs one for social sharing</li>
+        <li>Use placeholder text as a substitute for a visible label</li>
+        <li>Let any page go live without a unique title tag</li>
+        <li>Add a third font family — three is the limit (display, body, mono)</li>
+        <li>Use border-radius greater than 4px on any brand component</li>
+        <li>Auto-play video or audio — ever</li>
+        <li>Place the logo on any background other than Ink, Navy Deep, or Off-White</li>
+        <li>Ship a blank or broken empty state — every zero-state needs copy + CTA</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Final token dump -->
+  <div class="block-label mt-lg">Complete CSS Token Reference</div>
+  <div class="code">
+<span class="c">/* ════════════════════════════════════════
+   DIRECT PROPERTY PARTNERS
+   Complete Design Token System · v2.0
+   Copy this entire block into your root CSS
+════════════════════════════════════════ */</span>
+<span class="s">:root</span> {
+
+  <span class="c">/* ── COLOR ── */</span>
+  <span class="p">--ink</span>:        <span class="v">#040c1b</span>;
+  <span class="p">--navy-deep</span>:  <span class="v">#0B1C38</span>;
+  <span class="p">--navy</span>:       <span class="v">#163366</span>;
+  <span class="p">--navy-light</span>: <span class="v">#1F4899</span>;
+  <span class="p">--blue</span>:       <span class="v">#0B7EFF</span>;
+  <span class="p">--blue-hover</span>: <span class="v">#0066D6</span>;
+  <span class="p">--blue-soft</span>:  <span class="v">#4DA6FF</span>;
+  <span class="p">--white</span>:      <span class="v">#FFFFFF</span>;
+  <span class="p">--off-white</span>:  <span class="v">#f2f6fc</span>;
+  <span class="p">--gray-100</span>:   <span class="v">#E1E8F2</span>;
+  <span class="p">--gray-400</span>:   <span class="v">#8A9BB5</span>;
+  <span class="p">--gray-600</span>:   <span class="v">#5b6e8a</span>;
+  <span class="p">--gray-700</span>:   <span class="v">#3a5070</span>;
+  <span class="p">--success</span>:    <span class="v">#16a34a</span>;
+  <span class="p">--error</span>:      <span class="v">#dc2626</span>;
+  <span class="p">--warning</span>:    <span class="v">#d97706</span>;
+
+  <span class="c">/* ── TYPOGRAPHY ── */</span>
+  <span class="p">--font-display</span>: <span class="v">'Barlow Condensed', sans-serif</span>;
+  <span class="p">--font-body</span>:    <span class="v">'Outfit', sans-serif</span>;
+  <span class="p">--font-mono</span>:    <span class="v">'DM Mono', monospace</span>;
+
+  <span class="c">/* ── SPACING (8px base) ── */</span>
+  <span class="p">--s-1</span>:  <span class="v">4px</span>;   <span class="p">--s-2</span>:  <span class="v">8px</span>;   <span class="p">--s-3</span>:  <span class="v">12px</span>;
+  <span class="p">--s-4</span>:  <span class="v">16px</span>;  <span class="p">--s-5</span>:  <span class="v">24px</span>;  <span class="p">--s-6</span>:  <span class="v">32px</span>;
+  <span class="p">--s-7</span>:  <span class="v">48px</span>;  <span class="p">--s-8</span>:  <span class="v">64px</span>;  <span class="p">--s-9</span>:  <span class="v">80px</span>;
+  <span class="p">--s-10</span>: <span class="v">120px</span>;
+
+  <span class="c">/* ── MOTION ── */</span>
+  <span class="p">--ease-out</span>:  <span class="v">cubic-bezier(0.16, 1, 0.3, 1)</span>;
+  <span class="p">--ease-std</span>:  <span class="v">cubic-bezier(0.4, 0, 0.2, 1)</span>;
+  <span class="p">--ease-in</span>:   <span class="v">cubic-bezier(0.4, 0, 1, 1)</span>;
+  <span class="p">--dur-fast</span>:  <span class="v">120ms</span>;
+  <span class="p">--dur-std</span>:   <span class="v">220ms</span>;
+  <span class="p">--dur-slow</span>:  <span class="v">400ms</span>;
+  <span class="p">--dur-xslow</span>: <span class="v">700ms</span>;
+
+  <span class="c">/* ── LAYOUT ── */</span>
+  <span class="p">--max-width</span>:      <span class="v">1280px</span>;
+  <span class="p">--section-pad-x</span>:  <span class="v">clamp(24px, 6vw, 100px)</span>;
+  <span class="p">--section-pad-y</span>:  <span class="v">clamp(60px, 8vw, 120px)</span>;
+  <span class="p">--nav-height</span>:     <span class="v">68px</span>;
+  <span class="p">--border-radius</span>:  <span class="v">2px</span>;
+
+  <span class="c">/* ── Z-INDEX STACK ── */</span>
+  <span class="p">--z-base</span>:         <span class="v">0</span>;     <span class="c">/* Default page content */</span>
+  <span class="p">--z-raised</span>:       <span class="v">10</span>;    <span class="c">/* Cards on hover, tooltips */</span>
+  <span class="p">--z-sticky</span>:       <span class="v">50</span>;    <span class="c">/* Sticky sidebars, section headers */</span>
+  <span class="p">--z-nav</span>:          <span class="v">100</span>;   <span class="c">/* Main navigation — always on top of content */</span>
+  <span class="p">--z-drawer</span>:       <span class="v">200</span>;   <span class="c">/* Mobile nav drawer — above nav */</span>
+  <span class="p">--z-overlay</span>:      <span class="v">300</span>;   <span class="c">/* Modal/dialog backdrop */</span>
+  <span class="p">--z-modal</span>:        <span class="v">400</span>;   <span class="c">/* Modal/dialog content */</span>
+  <span class="p">--z-toast</span>:        <span class="v">500</span>;   <span class="c">/* Toast notifications — always highest */</span>
+}
+
+<span class="c">/* ── BUTTON MOBILE FULL-WIDTH ── */</span>
+@media (max-width: <span class="v">639px</span>) {
+  <span class="s">.btn-primary</span>,
+  <span class="s">.btn-secondary</span> {
+    <span class="p">width</span>: <span class="v">100%</span>;
+    <span class="p">text-align</span>: <span class="v">center</span>;
+    <span class="p">justify-content</span>: <span class="v">center</span>;
+    <span class="p">padding</span>: <span class="v">18px 24px</span>; <span class="c">/* Taller tap target on mobile */</span>
+    <span class="p">min-height</span>: <span class="v">52px</span>;    <span class="c">/* WCAG 2.5.5 target size */</span>
+  }
+  <span class="s">.btn-row</span> {
+    <span class="p">flex-direction</span>: <span class="v">column</span>;
+    <span class="p">gap</span>: <span class="v">12px</span>;
+  }
+}
+  </div>
+</section>
+
+
+<!-- ─── DOC FOOTER ─── -->
+<div class="doc-footer">
+  <div class="doc-footer-left">
+    <svg viewBox="0 0 82 84" width="52" xmlns="http://www.w3.org/2000/svg">
+      <line x1="10" y1="36" x2="46" y2="36" stroke="white" stroke-width="8" stroke-linecap="square"/>
+      <line x1="46" y1="36" x2="46" y2="74" stroke="white" stroke-width="8" stroke-linecap="square"/>
+      <circle cx="10" cy="36" r="7" fill="white"/><circle cx="46" cy="74" r="7" fill="white"/>
+      <circle cx="46" cy="36" r="13" fill="#0B7EFF"/><circle cx="46" cy="36" r="5" fill="white"/>
+    </svg>
+  </div>
+  <div>
+    <div class="doc-footer-text"><strong>DIRECT PROPERTY PARTNERS</strong> · BRAND GUIDELINES V2.0 · 2026</div>
+    <div class="doc-footer-text">13 SECTIONS · SHIP-READY · CIRCUIT CORNER MARK</div>
+  </div>
+  <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-700);letter-spacing:0.1em;text-transform:uppercase;">// END_OF_DOCUMENT</div>
+</div>
+
+</div><!-- end main -->
+
+<script>
+// Sidebar scroll spy
+const sections = document.querySelectorAll('[id^="s"]');
+const links = document.querySelectorAll('.sidebar-link');
+const cover = document.getElementById('cover');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  if (window.scrollY < cover.offsetHeight * 0.9) {
+    current = 'cover';
+  } else {
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+  }
+  links.forEach(l => {
+    l.classList.remove('active');
+    if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
