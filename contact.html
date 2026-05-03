@@ -214,14 +214,19 @@ footer{background:#010509;padding:72px 48px 36px;border-top:1px solid #0d1e38;}
   .footer-top{grid-template-columns:1fr 1fr;gap:36px;}
 }
 @media(max-width:768px){
-  .nav{padding:0 24px;}
+  .nav{padding:0 20px;}
   .nav-links,.nav-cta{display:none;}
   .nav-hamburger{display:flex;}
   .nav-drawer{display:block;}
-  .page-hero{padding:100px 24px 56px;}
-  .contact-section{padding:48px 24px;}
-  .form-wrap{padding:32px 24px;}
-  footer{padding:56px 24px 28px;}
+  .nav-wordmark-top{font-size:13px;letter-spacing:0.04em;}
+  .nav-wordmark-sub{display:none;}
+  .page-hero{padding:100px 20px 56px;}
+  .page-h1{font-size:clamp(38px,10vw,60px);}
+  .page-sub{font-size:16px;}
+  .contact-section{padding:48px 20px;}
+  .form-wrap{padding:28px 20px;}
+  .form-input,.form-select,.form-textarea{font-size:16px;} /* prevents iOS zoom */
+  footer{padding:56px 20px 28px;}
   .footer-top{grid-template-columns:1fr;}
   .footer-bottom{flex-direction:column;align-items:flex-start;}
 }
