@@ -188,8 +188,8 @@ body{font-family:var(--font-body);background:var(--ink);color:var(--white);font-
 .stat-item:first-child{padding-left:0;}
 .stat-item:last-child{border-right:none;padding-right:0;}
 .stat-number{font-family:var(--font-display);font-size:56px;font-weight:900;color:var(--blue);letter-spacing:0.02em;line-height:1;margin-bottom:12px;}
-.stat-label{font-family:var(--font-body);font-size:15px;color:var(--gray-200);line-height:1.6;}
-.stat-sublabel{font-family:var(--font-mono);font-size:9px;color:var(--gray-600);letter-spacing:0.2em;text-transform:uppercase;margin-top:8px;}
+.stat-label{font-family:var(--font-body);font-size:17px;color:var(--gray-100);line-height:1.65;font-weight:500;}
+.stat-sublabel{font-family:var(--font-mono);font-size:10px;color:var(--blue-soft);letter-spacing:0.2em;text-transform:uppercase;margin-top:10px;}
 
 /* SECTIONS */
 .section{padding:100px 48px;position:relative;}
@@ -282,9 +282,10 @@ footer{background:#010509;padding:72px 48px 36px;border-top:1px solid #0d1e38;}
 }
 @media(max-width:768px){
   .nav{padding:0 20px;background:var(--ink)!important;border-bottom-color:#0d1e38!important;}
+  .nav.scrolled{background:var(--ink)!important;height:68px;}
   .nav-links,.nav-cta{display:none;}
   .nav-hamburger{display:flex;}
-  .nav-drawer{display:block;overflow:hidden;}
+  .nav-drawer{display:block;overflow:hidden;top:68px;}
   .nav-wordmark-top{font-size:13px;letter-spacing:0.04em;}
   .nav-wordmark-sub{display:none;}
   .hero{padding:88px 20px 56px;}
@@ -295,7 +296,7 @@ footer{background:#010509;padding:72px 48px 36px;border-top:1px solid #0d1e38;}
   .hero-actions a{width:100%;text-align:center;}
   .stats-bar{padding:36px 20px;}
   .stat-number{font-size:clamp(42px,10vw,60px);}
-  .stat-label{font-size:13px;}
+  .stat-label{font-size:15px;}
   .services-grid{grid-template-columns:1fr;}
   .section{padding:56px 20px;}
   .section-title{font-size:clamp(38px,9vw,56px);}
@@ -533,7 +534,7 @@ footer{background:#010509;padding:72px 48px 36px;border-top:1px solid #0d1e38;}
 <!-- WHO IT'S FOR -->
 <section class="section section-alt" id="who" aria-labelledby="who-heading">
   <div class="section-eyebrow reveal">// built_for</div>
-  <h2 class="section-title reveal reveal-delay-1" id="who-heading">WHO WE<br><em>BUILD FOR.</em></h2>
+  <h2 class="section-title reveal reveal-delay-1" id="who-heading">WHAT DO<br><em>WE BUILD?</em></h2>
   <div class="who-grid reveal reveal-delay-2">
     <div class="who-card">
       <div class="who-card-label">
@@ -848,7 +849,7 @@ footer{background:#010509;padding:72px 48px 36px;border-top:1px solid #0d1e38;}
   function updateNav(){
     const y=window.scrollY;
     nav.classList.toggle('scrolled',y>80);
-    nav.classList.toggle('hidden',y>lastY&&y>200);
+    nav.classList.toggle('hidden',y>lastY&&y>200&&window.innerWidth>768);
     lastY=y;ticking=false;
   }
   window.addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(updateNav);ticking=true;}},{passive:true});

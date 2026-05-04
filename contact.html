@@ -215,9 +215,10 @@ footer{background:#010509;padding:72px 48px 36px;border-top:1px solid #0d1e38;}
 }
 @media(max-width:768px){
   .nav{padding:0 20px;background:var(--ink)!important;border-bottom-color:#0d1e38!important;}
+  .nav.scrolled{background:var(--ink)!important;height:68px;}
   .nav-links,.nav-cta{display:none;}
   .nav-hamburger{display:flex;}
-  .nav-drawer{display:block;overflow:hidden;}
+  .nav-drawer{display:block;overflow:hidden;top:68px;}
   .nav-wordmark-top{font-size:13px;letter-spacing:0.04em;}
   .nav-wordmark-sub{display:none;}
   .page-hero{padding:100px 20px 56px;}
@@ -418,7 +419,7 @@ footer{background:#010509;padding:72px 48px 36px;border-top:1px solid #0d1e38;}
 <script>
 (function(){
   const nav=document.getElementById('main-nav');let lastY=window.scrollY,ticking=false;
-  function u(){const y=window.scrollY;nav.classList.toggle('scrolled',y>80);nav.classList.toggle('hidden',y>lastY&&y>200);lastY=y;ticking=false;}
+  function u(){const y=window.scrollY;nav.classList.toggle('scrolled',y>80);nav.classList.toggle('hidden',y>lastY&&y>200&&window.innerWidth>768);lastY=y;ticking=false;}
   window.addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(u);ticking=true;}},{passive:true});
   const hbg=document.getElementById('hamburger'),drw=document.getElementById('nav-drawer');
   hbg.addEventListener('click',function(){const o=drw.classList.toggle('open');hbg.classList.toggle('open',o);hbg.setAttribute('aria-expanded',String(o));});
